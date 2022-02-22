@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Windows 基础开发环境包管理工具chocolatey</title>
+    <url>/liuqi_blogs/2022/02/22/chocolatey/</url>
+    <content><![CDATA[<p>Windows 基础开发环境包管理工具chocolatey。</p>
+<p>安装chocolatey<br>以管理员权限运行cmd.exe或powershell.exe</p>
+<span id="more"></span>
+
+<p>cmd运行：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">@<span class="string">&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot;</span> -<span class="title class_">NoProfile</span> -<span class="title class_">InputFormat</span> <span class="title class_">None</span> -<span class="title class_">ExecutionPolicy</span> <span class="title class_">Bypass</span> -<span class="title class_">Command</span> <span class="string">&quot;iex ((New-Object System.Net.WebClient).DownloadString(&#x27;https://chocolatey.org/install.ps1&#x27;))&quot;</span> &amp;&amp; <span class="variable constant_">SET</span> <span class="string">&quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;</span></span><br></pre></td></tr></table></figure>
+<p>powershell运行：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span>@<span class="string">&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot;</span> -<span class="title class_">NoProfile</span> -<span class="title class_">InputFormat</span> <span class="title class_">None</span> -<span class="title class_">ExecutionPolicy</span> <span class="title class_">Bypass</span> -<span class="title class_">Command</span> <span class="string">&quot;iex ((New-Object System.Net.WebClient).DownloadString(&#x27;https://chocolatey.org/install.ps1&#x27;))&quot;</span> &amp;&amp; <span class="variable constant_">SET</span> <span class="string">&quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;</span></span><br></pre></td></tr></table></figure>
+<p>安装完成，运行choco 或 choco -?检查一下是否安装正确</p>
+<p>chocolatey安装位置：C:\ProgramData\Chocolatey。无法配置包安装位置。<br>参考文章Windows 神器 Cmder Scoop Chocolatey Listary Seer，可安装的应用程序默认安装在 C:\Program Files\，实际待考究。</p>
+<p>用法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">search - 搜索包 choco search somethinglist - 列出包 choco list -lo 或者 choco list --local-onlyinstall - 安装 choco install baretailpin - 固定包的版本，防止包被升级 choco pin windirstatupgrade - 安装包的升级 choco upgrade baretailuninstall - 安装包的卸载 choco uninstall baretail安装<span class="title class_">Ruby</span> <span class="title class_">Gem</span> - choco install compass -source ruby安装<span class="title class_">Python</span> <span class="title class_">Egg</span> - choco install sphynx -source python安装<span class="variable constant_">IIS</span>服务器特性 - choco install <span class="variable constant_">IIS</span> -source windowsfeatures安装<span class="title class_">Webpi</span>特性 - choco install <span class="title class_">IIS7</span>.5Express -source webpi列出<span class="title class_">Windows</span>系统已安装的软件 - choco list -li 或者 choco list -lai升级所有已安装的包 - choco upgrade all -y</span><br></pre></td></tr></table></figure>
+
+<p>window 下开发常用的开发环境应用</p>
+<pre><code>choco install autohotkey.portable #安装 AutoHotkey (Portable)choco install nodejs.install #安装 nodechoco install git.install #安装 gitchoco install ruby #安装 rubychoco install python #安装 pythonchoco install jdk8 #安装 JDK8choco install googlechrome #安装 Chromechoco install google-chrome-x64 #Google Chrome (64-bit only)choco install firefox #安装 firefoxchoco install notepadplusplus.install #安装 notepad++choco install Atom #安装 Atomchoco install SublimeText3 #安装 SublimeText3
+</code></pre>
+]]></content>
+      <categories>
+        <category>windows工具</category>
+      </categories>
+      <tags>
+        <tag>windows包管理工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>home</title>
+    <url>/liuqi_blogs/2022/02/19/home/</url>
+    <content><![CDATA[<p>categories:</p>
+<ul>
+<li>Sports</li>
+<li>Baseball<br>tags:</li>
+<li>Injury</li>
+<li>Fight</li>
+<li>Shocking</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Testing</tag>
+        <tag>Another Tag</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/liuqi_blogs/2022/02/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>Testing</tag>
+        <tag>Another Tag</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Jekyll + Github Pages 搭建个人免费博客</title>
+    <url>/liuqi_blogs/2022/02/19/jekyll/</url>
+    <content><![CDATA[<p>​<br>今天亲手通过 Jekyll 搭建了一套免费博客，搭建步骤其实超级简单。你不需要购买域名，也不需要购买服务器，就可以轻松拥有你自己的博客。<br>Jekyll 的核心是一个文本转换引擎。它的方便之处在于支持多种文本标记语言：Markdown，Textile，HTML，然后 Jekyll 就会帮你加入你选择主题的样式的布局中。最终生成你自己的静态博客网站。</p>
+<span id="more"></span>
+
+<p>博客搭建步骤</p>
+<p>1.安装环境<br>1.1 安装Ruby<br>官网地址：<a href="https://rubyinstaller.org/downloads/">https://rubyinstaller.org/downloads/</a><br>根据自己的需要下载不同版本，直接点击“下一步”就可轻松安装成功。</p>
+<p>1.2 安装RubyGems<br>官网地址：<a href="https://rubygems.org/pages/download">https://rubygems.org/pages/download</a><br>据自己的需要下载不同版本。解压压缩文件到本地。在 CMD 命令窗口执行如下命令：</p>
+<p>cd D:\下载\rubygems-3.0.6\rubygems-3.0.6    #切换文件目录<br>ruby setup.rb        #安装<br>rubygems ruby -v     #查看rubygems版本号</p>
+<p>1.3 安装Jekyll<br>以上两个步骤操作完成后，在 CMD 窗口执行如下命令安装Jekyll：</p>
+<p>gem install jekyll   #安装jekyll<br>jekyll -v    #查看jekyll版本号</p>
+<p>2.本地搭建博客<br>2.1 项目启动</p>
+<p>jekyll new restlessManBlog   #新建博客<br>cd restlessManBlog           #切换目录<br>jekyll server                #启动项目</p>
+<p>项目启动日志如下：</p>
+<p>在浏览器访问：<a href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p>2.2 添加 MarkDown 文档<br>在项目根目录下的 _posts 目录创建 markdown 文档。这里注意 md 文档命名要添加 “yyyy-mm-dd”的前缀。<br>例如：2019-10-11-5分钟搭建博客.md</p>
+<p>2.3 部署代码到 Github<br>2.3.1 创建 Github 账号<br>注：这里我使用的 Github 托管静态博客的，你也可以选择把代码托管到 码云 或者其他平台上。<br>没有 Github 账号的朋友可以注册一个账号，有账号的朋友可跳过。</p>
+<p>2.3.2 创建代码仓库<br>创建一个名称为 ‘账号名称.<a href="http://github.io’。例如：我的账号名是helloRestlessMan，仓库名就是">http://github.io’。例如：我的账号名是helloRestlessMan，仓库名就是</a> helloRestlessMan.github.io</p>
+<p>2.3.3 部署代码到Github<br>在我们创建的博客的目录找到 _site 目录，将 _site 目录下的所有文件都提交到Github上。</p>
+<p>操作步骤：</p>
+<p>git clone <a href="https://github.com/helloRestlessMan/helloRestlessMan.github.io.git">https://github.com/helloRestlessMan/helloRestlessMan.github.io.git</a><br>#克隆远程代码到本地<br>拷贝_site 文件到 helloRestlessMan.github.io cd helloRestlessMan.github.io<br>git add .   #git 命令添加所有文件<br>git commit -m “创建 Jekyll 个人博客”      #git 提交文件<br>git push    #git 推送代码到远程</p>
+<p>2.4部署代码到码云（Gitee）<br>创建与账号名相同的仓库，如下图：</p>
+<p>提交代码到 Gitee 上，再开启 Gitee Pages 服务即可。</p>
+<p>最后就可以访问了。<a href="http://huaairen.gitee.io/">http://huaairen.gitee.io/</a></p>
+<p>2.5 访问自己的博客网站<br>效果如下图：</p>
+<p>2.6 切换主题<br>我这里下载的主题是 mundana-jekyll-theme,</p>
+<p>主题下载地址：<a href="http://jekyllthemes.org/themes/mundana-jekyll-theme/">http://jekyllthemes.org/themes/mundana-jekyll-theme/</a><br>注：可能存在兼容性问题，使用下面的命令</p>
+<p>cd mundana-jekyll-theme bundle install    #安装依赖<br>bundle exec jekyll serve   #运行项目</p>
+<p>我的博客地址：<a href="https://hellorestlessman.github.io/">https://hellorestlessman.github.io/</a><br>项目运行效果：</p>
+<p>丰富的主题自由选择</p>
+<p>这里推荐两款 Jekyll 主题的网站：<br>1.官方主题网站：<a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a><br>2.Github 上的博客模板：<a href="https://github.com/jekyll/jekyll/wiki/Sites">https://github.com/jekyll/jekyll/wiki/Sites</a></p>
+<p>文章推荐</p>
+<ol>
+<li>Github + hexo matery 主题搭建免费博客</li>
+<li>5分钟搭建私人Java博客系统</li>
+<li>手把手博客搭建</li>
+</ol>
+<p>参考资料<br>1.使用 github + jekyll 搭建个人博客</p>
+<p>2.Github + Jekyll 搭建个人博客</p>
+<p>3.Jekyll主题收藏</p>
+<p>4.Gitee + Jekyll 搭建博客</p>
+]]></content>
+      <categories>
+        <category>jekyll</category>
+      </categories>
+      <tags>
+        <tag>搭建blog教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next8.0添加动漫人物</title>
+    <url>/liuqi_blogs/2022/02/22/next8-0%E6%B7%BB%E5%8A%A0%E5%8A%A8%E6%BC%AB%E4%BA%BA%E7%89%A9/</url>
+    <content><![CDATA[<p>添加卡通人物（看板娘）<br/><br>我在逛别人博客的时候偶然发现右下角居然有一个萌萌的卡通人物，还能根据你鼠标位置摇头，瞬间被吸引到了，赶紧也给自己博客添加一个吧！点击此处进入该项目地址</p>
+<span id="more"></span>
+
+<p>输入如下命令获取 live2d ：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">$ npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+<br/>
+输入以下命令，下载相应的模型，将 packagename 更换成模型名称即可，
+<br/>
+更多模型选择请点击https://github.com/xiazeyu/live2d-widget-models，各个模型的预览请访问原作者的博客https://huaji8.top/post/live2d-plugin-2.0/
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">$ npm install packagename</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">use npm install &#123;packagename&#125; The <span class="keyword">package</span> name is the folder name in packages/ We have:</span><br><span class="line"></span><br><span class="line">live2d-widget-model-chitose</span><br><span class="line">live2d-widget-model-epsilon2_1</span><br><span class="line">live2d-widget-model-gf</span><br><span class="line">live2d-widget-model-haru/<span class="number">01</span> (use npm install --save live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haru/<span class="number">02</span> (use npm install --save live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haruto</span><br><span class="line">live2d-widget-model-hibiki</span><br><span class="line">live2d-widget-model-hijiki</span><br><span class="line">live2d-widget-model-izumi</span><br><span class="line">live2d-widget-model-koharu</span><br><span class="line">live2d-widget-model-miku</span><br><span class="line">live2d-widget-model-ni-j</span><br><span class="line">live2d-widget-model-nico</span><br><span class="line">live2d-widget-model-nietzsche</span><br><span class="line">live2d-widget-model-nipsilon</span><br><span class="line">live2d-widget-model-nito</span><br><span class="line">live2d-widget-model-shizuku</span><br><span class="line">live2d-widget-model-tororo</span><br><span class="line">live2d-widget-model-tsumiki</span><br><span class="line">live2d-widget-model-unitychan</span><br><span class="line">live2d-widget-model-wanko</span><br><span class="line">live2d-widget-model-z16</span><br></pre></td></tr></table></figure>
+<br/>
+打开站点目录下的 _config.yml 文件，添加如下代码：
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">    enable: <span class="literal">true</span></span><br><span class="line">    scriptFrom: local</span><br><span class="line">    model: </span><br><span class="line">        use: live2d-widget-model-haruto #模型选择</span><br><span class="line">    display: </span><br><span class="line">        position: right  #模型位置</span><br><span class="line">        width: <span class="number">150</span>       #模型宽度</span><br><span class="line">        height: <span class="number">300</span>      #模型高度</span><br><span class="line">    mobile: </span><br><span class="line">        show: <span class="literal">false</span>      #是否在手机端显示</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>live2d动漫动态</category>
+      </categories>
+      <tags>
+        <tag>hexo-next主题配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next主题添加老板娘</title>
+    <url>/liuqi_blogs/2022/02/21/next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E8%80%81%E6%9D%BF%E5%A8%98/</url>
+    <content><![CDATA[<p>有时候在逛别人的博客界面的时候，会在页面左下角或者右下角等界面看到这样的画面,还是非常好看的<br><img src="https://img-blog.csdnimg.cn/20200714162808591.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F3dF9GdURvbmdMYWk=,size_16,color_FFFFFF,t_70" alt="(老板娘)"></p>
+<p>今天这篇博客总结下，怎么把萌萌哒的看板娘放到自己的博客页面中。</p>
+<span id="more"></span>
+
+<p>我采用的hexo的next主题。</p>
+<p>1.下载live2D文件。</p>
+<p>2.将其解压后，放置在下面目录：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">博客主目录\themes\next\source\</span><br><span class="line"></span><br><span class="line">[root@D-<span class="title class_">Centos7</span> live2d-widget]# pwd</span><br><span class="line">/www/wwwroot/my_blog_2_hexo/themes/next/source/live2d-widget</span><br></pre></td></tr></table></figure>
+
+
+<p>3 更改live2d-widget下的autoload.js文件。里面的内容已经写好了，注释第二行，取消第三行的注释就行了。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 注意：live2d_path 参数应使用绝对路径</span></span><br><span class="line"><span class="comment">//const live2d_path = &quot;https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/&quot;;</span></span><br><span class="line"><span class="keyword">const</span> live2d_path = <span class="string">&quot;/live2d-widget/&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>4 修改/themes/next/layout/下的_layout.swing或者_layout.swig文件，在head标签中添加一行代码。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;/live2d-widget/autoload.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/live2d-widget/autoload.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>5 在theme/next/_config.yml中,新增如下内容：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">live2d</span>:</span><br><span class="line">  <span class="attr">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>6 然后在博客根目录重新生成即可。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cd 博客目录</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以看到效果了。<br><img src="https://img-blog.csdnimg.cn/20200714171310758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0F3dF9GdURvbmdMYWk=,size_16,color_FFFFFF,t_70" alt="然后就可以看到效果了。"></p>
+<p>4.个性化设置<br>想修改看板娘大小、位置、格式、文本内容等，可查看并修改 waifu-tips.js 、 waifu-tips.json 和 waifu.css</p>
+<p>参考文章<br><a href="https://www.jianshu.com/p/89440678ee3c">https://www.jianshu.com/p/89440678ee3c</a><br><a href="https://github.com/stevenjoezhang/live2d-widget">https://github.com/stevenjoezhang/live2d-widget</a></p>
+]]></content>
+      <categories>
+        <category>live2d动漫动态</category>
+      </categories>
+      <tags>
+        <tag>hexo-next主题配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件包管理工具scoop</title>
+    <url>/liuqi_blogs/2022/02/22/scoop/</url>
+    <content><![CDATA[<p>软件包管理工具scoop，类似chocolatey,chocolatey很多软件安装位置不固定, 会污染Path，推荐能用scoop安装。scoop会统一安装到一个路径下。chocolatey权限要求高, scoop 使用-g安装才需要管理员权限, 默认普通用户权限.</p>
+<span id="more"></span>
+
+<p>scoop 安装<br>设置powershell</p>
+<pre><code>1set-executionpolicy remotesigned -s currentuser
+</code></pre>
+<p>默认安装(安装到C:\Users\scoop), 在powershell里面运行:</p>
+<pre><code>iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)
+</code></pre>
+<p>安装到指定目录(D:\tool\scoop)</p>
+<pre><code>[environment]::setEnvironmentVariable(&#39;SCOOP&#39;,&#39;D:\tool\scoop&#39;,&#39;User&#39;)$env:SCOOP=&#39;D:\tool\scoop&#39;iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)
+</code></pre>
+<p>指定-g安装目录(D:\tool\scoop_global)</p>
+<pre><code>[environment]::setEnvironmentVariable(&#39;SCOOP_GLOBAL&#39;,&#39;D:\tool\scoop_global&#39;,&#39;Machine&#39;)$env:SCOOP_GLOBAL=&#39;D:\tool\scoop_global&#39;
+</code></pre>
+<p>常用命令</p>
+<pre><code>1234567891011scoop help #帮助scoop list #查看当前已安装软件scoop info app #查看软件信息scoop install app #安装软件scoop search app #搜索软件scoop uninstall app #卸载软件scoop update app #更新指定软件scoop update * #更新安装的软件和scoop# 设置代理(http)scoop config proxy 127.0.0.1:4412
+</code></pre>
+<p>shims 目录<br>scoop安装程序后会在scoop安装目录下的shims里生成一个对应程序的shim.exe(不知道为啥不用快捷方式).</p>
+<p>安装scoop后 会自动把shims目录加到用户的Path里.</p>
+<p>persist 目录<br>这个目录下面放的是已安装软件的配置文件, 后续更新软件的时候这部分内容不会修改.</p>
+<p>scoop 添加 extras 源 (默认的软件有点少)</p>
+<pre><code>1scoop bucket add extras
+</code></pre>
+<p>一个源：</p>
+<pre><code>scoop bucket add extras https://github.com/lukesampson/scoop-extras.git  
+</code></pre>
+<hr>
+<p>scoop 使用问题<br>安装某些 gui 程序后, 运行对应的 shim.exe 会出现 cmd 窗口 (nvim-qt cmd窗口一直显示, cmder cmd窗口一闪而过 )  </p>
+<p>解决办法:把ScoopApps目录加到path里,目录在</p>
+<pre><code>C:\Users\fcying\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps
+</code></pre>
+<hr>
+<p>常用软件git,curl,7zip安装；有些需要管理员权限的软件就需要先安装sudo，就是Linux中的那个sudo；</p>
+<pre><code>12scoop install sudoscoop install git curl 7zip
+</code></pre>
+]]></content>
+      <categories>
+        <category>windows工具</category>
+      </categories>
+      <tags>
+        <tag>windows包管理工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>lorem ipsum</title>
+    <url>/liuqi_blogs/2020/01/02/sitemap/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Hexo-NexT Tag 插件的使用</title>
+    <url>/liuqi_blogs/2022/02/22/tagPlugin/</url>
+    <content><![CDATA[<p>Tag Plugin 是一种使 Hexo 支持特殊样式内容的方法。例如，我们无法在标准 Markdown 中显示具有自定义尺寸的图像。然后我们可以使用标签插件来解决它。 Hexo 有很多可以帮助用户的标签。 Hexo 还具有主题接口，使主题能够创建自己的标签。</p>
+<span id="more"></span>
+
+<p>文本居中引用 - Centered Quote<br>使用方法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;世间所有的相遇，都是久别重逢&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>提示块 - Note<br>使用方法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;% note <span class="keyword">default</span> %&#125;</span><br><span class="line"><span class="keyword">default</span> 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<br/>
+
+<p>主题配置文件中可以修改风格：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># <span class="title class_">Note</span> tag (bs-callout).</span><br><span class="line"><span class="attr">note</span>:</span><br><span class="line">  # <span class="title class_">Note</span> tag style <span class="attr">values</span>:</span><br><span class="line">  #  - simple    bs-callout old alert style. <span class="title class_">Default</span>.</span><br><span class="line">  #  - modern    bs-callout <span class="keyword">new</span> (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style <span class="keyword">with</span> background, like on <span class="title class_">Mozilla</span> or <span class="title class_">StackOverflow</span>.</span><br><span class="line">  #  - disabled  disable all <span class="variable constant_">CSS</span> styles <span class="keyword">import</span> <span class="keyword">of</span> note tag.</span><br><span class="line">  # 风格</span><br><span class="line">  <span class="attr">style</span>: flat</span><br><span class="line">  # 要不要图标</span><br><span class="line">  <span class="attr">icons</span>: <span class="literal">true</span></span><br><span class="line">  # 圆角矩形</span><br><span class="line">  <span class="attr">border_radius</span>: <span class="number">3</span></span><br><span class="line">  # <span class="title class_">Offset</span> lighter <span class="keyword">of</span> background <span class="keyword">in</span> % <span class="keyword">for</span> modern and flat styles (<span class="attr">modern</span>: -<span class="number">12</span> | <span class="number">12</span>; <span class="attr">flat</span>: -<span class="number">18</span> | <span class="number">6</span>).</span><br><span class="line">  # <span class="title class_">Offset</span> also applied to label tag variables. <span class="title class_">This</span> option can work <span class="keyword">with</span> disabled note tag.</span><br><span class="line">  <span class="attr">light_bg_offset</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p><u>标签 - Label</u><br/><br>使用方法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;% label <span class="keyword">default</span>@默认 %&#125; &#123;% label primary@主要 %&#125; &#123;% label success@成功 %&#125; &#123;% label info@信息 %&#125; &#123;% label warning@警告 %&#125; &#123;% label danger@危险 %&#125; </span><br><span class="line">&#123;% label success@这是成功的信息%&#125;</span><br></pre></td></tr></table></figure>
+<br/>
+<u>选项卡 - Tabs</u>
+<br/>
+使用方法:
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;% tabs tab,<span class="number">1</span> %&#125; 名字为tab，默认在第<span class="number">1</span>个选项卡，如果是-<span class="number">1</span>则隐藏</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 <span class="number">1</span>** </span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**选项卡 <span class="number">2</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab A --&gt;</span><br><span class="line">**选项卡 <span class="number">3</span>** 名字为A</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># <span class="title class_">Tabs</span> tag</span><br><span class="line"><span class="attr">tabs</span>:</span><br><span class="line">  <span class="attr">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="attr">transition</span>:</span><br><span class="line">    <span class="attr">tabs</span>: <span class="literal">true</span></span><br><span class="line">    <span class="attr">labels</span>: <span class="literal">true</span></span><br><span class="line">  <span class="attr">border_radius</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+<u>按钮 - Button</u>
+<br/>
+使用方法:
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;% button url, text, icon [<span class="keyword">class</span>], [title] %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>url : 绝对或相对 URL<br>text : 按钮文字，如果未指定图标则为必须<br>icon : FontAwesome 图标名称（开头没有’fa-‘）。如果未指定文本，则为必需<br>[class] : FontAwesome 类：fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5X ，可选参数。<br>[title] : 鼠标悬停时的工具提示，可选参数。</p>
+<p>注意：最好添加 div标签，测试时没加 div，下面显示不完全，加上非常美观。</p>
+<p>一个示例：</p>
+<pre><code>&lt;div&gt;&#123;% button https://tding.top/ ,首页,home fa-fw,这是小丁的个人博客首页%&#125;&lt;/div&gt;
+</code></pre>
+<br/>
+多个按钮居中显示：
+
+<pre><code>&lt;div class=&quot;text-center&quot;&gt;&lt;div&gt;&#123;% button https://tding.top/ ,首页,home fa-fw,这是小丁的个人博客首页%&#125; &#123;% button https://tding.top/movies/ ,观影,film fa-fw,豆瓣电影%&#125; &#123;% button https://tding.top/books/ ,阅读,book fa-fw,豆瓣读书%&#125;&lt;/div&gt;&lt;/div&gt;
+</code></pre>
+]]></content>
+      <categories>
+        <category>markdown标签</category>
+      </categories>
+      <tags>
+        <tag>hexo-next主题配置</tag>
+      </tags>
+  </entry>
+</search>
