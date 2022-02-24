@@ -309,15 +309,15 @@
 <h3 id="快速生成-html-的骨架"><a href="#快速生成-html-的骨架" class="headerlink" title="快速生成 html 的骨架"></a>快速生成 html 的骨架</h3><p><strong>方式1</strong>：在 VS Code 中新建 html 文件，输入<code>html:5</code>，按 <code>Tab</code>键后，自动生成的代码如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html;charset=UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13</p>
+
 <p><strong>方式2</strong>：在Sublime Text中安装<code>Emmet</code>插件。新建html文件，输入<code>html:5</code>，按<code>Tab</code>键后，自动生成的代码如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</p>
+
 <p><strong>方式3</strong>：在Sublime Text中安装<code>Emmet</code>插件。新建html文件，输入<code>html:xt</code>，按<code>Tab</code>键后（或者按Ctrl+E），自动生成的代码如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span> <span class="keyword">PUBLIC</span> <span class="string">&quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span> <span class="string">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/1999/xhtml&quot;</span> <span class="attr">xml:lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html;charset=UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</p>
+
 <p>上面的方式2和方式3中，我们会发现，第一行的内容有些不太一样，这就是我们接下来要讲的<strong>文档声明头</strong>。</p>
 <h3 id="1、文档声明头"><a href="#1、文档声明头" class="headerlink" title="1、文档声明头"></a>1、文档声明头</h3><p>任何一个标准的HTML页面，第一行一定是一个以<code>&lt;!DOCTYPE ……&gt;</code>开头的语句。</p>
 <p>这一行，就是文档声明头，DocType Declaration，简称DTD。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。</p>
@@ -340,7 +340,6 @@
 <p>1</p>
 <h3 id="2、头标签"><a href="#2、头标签" class="headerlink" title="2、头标签"></a>2、头标签</h3><h4 id="html5-的比较完整的骨架："><a href="#html5-的比较完整的骨架：" class="headerlink" title="html5 的比较完整的骨架："></a>html5 的比较完整的骨架：</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html;charset=UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;Author&quot;</span> <span class="attr">content</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;Keywords&quot;</span> <span class="attr">content</span>=<span class="string">&quot;牛逼，很牛逼，特别牛逼&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;Description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15</p>
 <p>面试题：</p>
 <ul>
 <li>问：网页的head标签里面，表示的是页面的配置，有什么配置？</li>
@@ -429,10 +428,10 @@
     <url>/liuqi_blogs/2021/09/17/04-HTML%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%B8%80/</url>
     <content><![CDATA[<h2 id="一、排版标签"><a href="#一、排版标签" class="headerlink" title="一、排版标签"></a>一、排版标签</h2><h3 id="注释标签"><a href="#注释标签" class="headerlink" title="注释标签"></a>注释标签</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注释  --&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1</p>
 <h3 id="段落标签-lt-p-gt"><a href="#段落标签-lt-p-gt" class="headerlink" title="段落标签&lt;p&gt;"></a>段落标签<code>&lt;p&gt;</code></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is a paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This is another paragraph<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <span id="more"></span>
-<p>1<br>2</p>
+
+
 <p>属性：</p>
 <ul>
 <li><code>align=&quot;属性值&quot;</code>：对齐方式。属性值包括left center right。 举例：</li>
@@ -448,7 +447,7 @@
 <p>错误写法：（尝试把 h 放到 p 里）</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">	我是一个小段落</span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>我是一级标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4</p>
+
 <p>网页效果如下：</p>
 <p><img src="http://img.smyhvae.com/20170630_1102.png" alt="img"></p>
 <p>上图显示，浏览器不允许你这么做，我们使用Chrome的F12审查元素发现，浏览器自己把p封闭掉了，不让你去包裹h1。</p>
@@ -474,16 +473,17 @@
 <p>span举例：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">	简介简介简介简介简介简介简介简介</span><br><span class="line">	<span class="tag">&lt;<span class="name">span</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>详细信息<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>购买<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</p>
+
+
 <p>div举例：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;logo&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;guanggao&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;dongxi&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</p>
+
 <p>所以，我们亲切的称呼这种模式叫做“<strong>div+css</strong>”。<strong>div标签负责布局，负责结构，负责分块。css负责样式</strong>。</p>
 <h3 id="换行标签-lt-br-gt-（已废弃）"><a href="#换行标签-lt-br-gt-（已废弃）" class="headerlink" title="#换行标签&lt;br&gt;（已废弃）"></a><a href="blog/web/base/html/04-HTML%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89.html#%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE-br-%EF%BC%88%E5%B7%B2%E5%BA%9F%E5%BC%83%EF%BC%89">#</a>换行标签<code>&lt;br&gt;</code>（已废弃）</h3><p>当你打算结束一行，而又不想开始一个新段落时，<code>&lt;br&gt;</code>标签就派上用场了。无论你将它置于何处，<code>&lt;br&gt;</code>标签都会产生一个强制的换行。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">This <span class="tag">&lt;<span class="name">br</span>&gt;</span> is a para<span class="tag">&lt;<span class="name">br</span>&gt;</span>graph with line breaks</span><br></pre></td></tr></table></figure>
 
-<p>1</p>
+
 <p>效果如下：</p>
 <p><img src="http://img.smyhvae.com/2015-10-01-cnblogs_html03.png" alt="img"></p>
 <p>上图显示，**<code>&lt;p&gt;</code>标签和<code>&lt;br&gt;</code>标签的区别在于**：<code>&lt;p&gt;</code>标签会在段落的前后自动插入一个空行，而<code>&lt;br&gt;</code>标签没有空行；而且<code>&lt;br&gt;</code>标签没有属性。</p>
@@ -694,11 +694,11 @@
 <h4 id="备注2：a是一个文本级的标签"><a href="#备注2：a是一个文本级的标签" class="headerlink" title="#备注2：a是一个文本级的标签"></a><a href="blog/web/base/html/04-HTML%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89.html#%E5%A4%87%E6%B3%A82%EF%BC%9Aa%E6%98%AF%E4%B8%80%E4%B8%AA%E6%96%87%E6%9C%AC%E7%BA%A7%E7%9A%84%E6%A0%87%E7%AD%BE">#</a>备注2：a是一个文本级的标签</h4><p>比如一个段落中的所有文字都能够被点击，那么应该是p包裹a：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>段落段落段落段落段落段落<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3</p>
+
 <p>而不是a包裹p：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">		段落段落段落段落段落段落</span><br><span class="line">	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4<br>5</p>
+
 <p>a的语义要小于p，a就是可以当做文本来处理，所以p里面相当于放的就是纯文字。</p>
 <h2 id="四、图片标签"><a href="#四、图片标签" class="headerlink" title="#四、图片标签"></a><a href="blog/web/base/html/04-HTML%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89.html#%E5%9B%9B%E3%80%81%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE">#</a>四、图片标签</h2><p>img: 代表的就是一张图片。是单边标记。</p>
 <p>img是自封闭标签，也称为单标签。</p>
@@ -718,17 +718,17 @@
 <p>举例1：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 当前目录中的图片 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;2.jpg&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;.\2.jpg&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 上一级目录中的图片 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;..\2.jpg&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4<br>5</p>
+
 <p>img 是image“图片”的简写，src 是英语source“资源”的缩写。</p>
 <p>相对路径不会出现这种情况：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">aaa/../bbb/1.jpg</span><br></pre></td></tr></table></figure>
 
-<p>1</p>
+
 <p><code>../</code>要么不写，要么就写在开头。</p>
 <p>举例2：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;images/1.jpg&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1</p>
+
 <p>上方代码的意思是说，当前html页面有一个并列的文件夹<code>images</code>，在文件夹<code>images</code>中存放了一张图片<code>1.jpg</code> 效果：</p>
 <p><img src="http://img.smyhvae.com/20151001_19.jpg" alt="Paste_Image.png"></p>
 <p>相对路径的面试题。现有如下文件层级图：</p>
@@ -778,7 +778,8 @@
 <p>举例：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;images/1.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;`188&quot;</span> <span class="attr">title</span>=<span class="string">&quot;这是美女&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1</p>
+
+
 <p>效果：</p>
 <p><img src="http://img.smyhvae.com/2015-10-01-cnblogs_html_20.png" alt="Paste_Image.png"></p>
 <p><code>Alt</code>属性效果演示：（当图片 src 不可用的时候，显示文字。这样做，至少能让用户知道，这个图片大概是什么内容）</p>
@@ -829,7 +830,7 @@
 <p>例如：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>默认1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>默认2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>默认3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1<br>2<br>3<br>4<br>5</p>
+
 <p>效果：</p>
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_01.png" alt="img"></p>
 <p>注意：</p>
@@ -1221,16 +1222,16 @@
 <p>类似的还有水平线标签：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>1</p>
+
 <p>换行标签：</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">&lt;br /&gt;</span><br></pre></td></tr></table></figure>
 
-<p>1</p>
+
 <p>但是，网页中99.9999%需要换行的时候，是因为另起了一个段落，所以要用p，而不要用<code>&lt;br /&gt;</code>。不到万不得已，不要用br标签。</p>
 <p>标准的div+css页面，只会用到种类很少的标签：</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">div  p  h1  span   a   img   ul   ol    dl    input</span><br></pre></td></tr></table></figure>
 
-<p>1</p>
+
 <p>知道每个标签的特殊用法、属性。比如a标签，img的属性。</p>
 ]]></content>
       <categories>
@@ -1721,117 +1722,142 @@
   </entry>
   <entry>
     <title>10-HTML基础回顾</title>
-    <url>/liuqi_blogs/2022/02/24/10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</url>
-    <content><![CDATA[<p>本文主要内容<br>html 的常见元素</p>
-<p>html 元素的分类</p>
-<p>html 元素的嵌套关系</p>
-<p>html 元素的默认样式和 CSS Reset</p>
-<p>html 常见面试题</p>
-<p>#html 的常见元素<br>html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。下面来分别介绍。</p>
+    <url>/liuqi_blogs/2021/10/27/10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</url>
+    <content><![CDATA[<h2 id="本文主要内容"><a href="#本文主要内容" class="headerlink" title="本文主要内容"></a>本文主要内容</h2><ul>
+<li>html 的常见元素</li>
+<li>html 元素的分类</li>
+<li>html 元素的嵌套关系</li>
+<li>html 元素的默认样式和 CSS Reset</li>
+<li>html 常见面试题</li>
+</ul>
 <span id="more"></span>
 
-<p>#1、head 区域的 html 元素<br>head 区域的 html 元素，不会在页面上留下直接的内容。</p>
-<p>meta</p>
-<p>title</p>
-<p>style</p>
-<p>link</p>
-<p>script</p>
-<p>base</p>
-<p>base元素的介绍：</p>
-<base href="/">
-base 标签用于指定基础的路径。指定之后，所有的 a 链接都是以这个路径为基准。
+<h2 id="html-的常见元素"><a href="#html-的常见元素" class="headerlink" title="#html 的常见元素"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#html-%E7%9A%84%E5%B8%B8%E8%A7%81%E5%85%83%E7%B4%A0">#</a>html 的常见元素</h2><p>html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。下面来分别介绍。</p>
+<h3 id="1、head-区域的-html-元素"><a href="#1、head-区域的-html-元素" class="headerlink" title="#1、head 区域的 html 元素"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#_1%E3%80%81head-%E5%8C%BA%E5%9F%9F%E7%9A%84-html-%E5%85%83%E7%B4%A0">#</a>1、head 区域的 html 元素</h3><blockquote>
+<p>head 区域的 html 元素，不会在页面上留下直接的内容。</p>
+</blockquote>
+<ul>
+<li>meta</li>
+<li>title</li>
+<li>style</li>
+<li>link</li>
+<li>script</li>
+<li>base</li>
+</ul>
+<p><strong>base元素的介绍</strong>：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;/&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>#2、html 元素（body 区域）<br>body 区域的 html 元素，会直接出现在页面上。</p>
-<p>div、section、article、aside、header、footer</p>
-<p>p</p>
-<p>span、em、strong</p>
-<p>表格元素：table、thead、tbody、tr、td</p>
-<p>列表元素：ul、ol、dl、dt、dd</p>
-<p>a</p>
-<p>表单元素：form、input、select、textarea、button</p>
-<p>div 是最常见的元素，大多数场景下，都可以用div（实在不行就多包几层div）。可见，div 是比较通用的元素，这也决定了 div 的的语义并不是很明确。</p>
-<p>常见标签的重要属性：</p>
-<p>a[href,target]<br>img[src,alt]<br>table td[colspan,rowspan]。设置当前单元格占据几行几列。在合并单元格时，会用到。<br>form[target,method,enctype]<br>input[type,value]<br>button[type]<br>selection&gt;option[value]<br>label[for]<br>#html 文档的大纲<br>我们平时在写论文或者其他文档的时候，一般会先列出大纲，然后再写具体的内容。</p>
+
+<p>base 标签用于指定基础的路径。指定之后，所有的 a 链接都是以这个路径为基准。</p>
+<h3 id="2、html-元素（body-区域）"><a href="#2、html-元素（body-区域）" class="headerlink" title="#2、html 元素（body 区域）"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#_2%E3%80%81html-%E5%85%83%E7%B4%A0%EF%BC%88body-%E5%8C%BA%E5%9F%9F%EF%BC%89">#</a>2、html 元素（body 区域）</h3><blockquote>
+<p>body 区域的 html 元素，会直接出现在页面上。</p>
+</blockquote>
+<ul>
+<li>div、section、article、aside、header、footer</li>
+<li>p</li>
+<li>span、em、strong</li>
+<li>表格元素：table、thead、tbody、tr、td</li>
+<li>列表元素：ul、ol、dl、dt、dd</li>
+<li>a</li>
+<li>表单元素：form、input、select、textarea、button</li>
+</ul>
+<p>div 是最常见的元素，大多数场景下，都可以用div（实在不行就多包几层div）。可见，<strong>div 是比较通用的元素，这也决定了 div 的的语义并不是很明确</strong>。</p>
+<p><strong>常见标签的重要属性</strong>：</p>
+<ul>
+<li>a[href,target]</li>
+<li>img[src,alt]</li>
+<li>table td[colspan,rowspan]。设置当前单元格占据几行几列。在合并单元格时，会用到。</li>
+<li>form[target,method,enctype]</li>
+<li>input[type,value]</li>
+<li>button[type]</li>
+<li>selection&gt;option[value]</li>
+<li>label[for]</li>
+</ul>
+<h3 id="html-文档的大纲"><a href="#html-文档的大纲" class="headerlink" title="#html 文档的大纲"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#html-%E6%96%87%E6%A1%A3%E7%9A%84%E5%A4%A7%E7%BA%B2">#</a>html 文档的大纲</h3><p>我们平时在写论文或者其他文档的时候，一般会先列出大纲，然后再写具体的内容。</p>
 <p>同样，html 网页也可以看成是一种文档，也有属于它的大纲。</p>
 <p>一个常见的html文档，它的结构可以是：</p>
-<pre><code>&lt;section&gt;
-    &lt;h1&gt;一级标题&lt;/h1&gt;
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>一级标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>二级标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>段落内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>二级标题<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>段落内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">aside</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>广告内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>某某公司出品<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-    &lt;section&gt;
-        &lt;h2&gt;二级标题&lt;/h2&gt;
-        &lt;p&gt;段落内容&lt;/p&gt;
-    &lt;/section&gt;
 
-    &lt;section&gt;
-        &lt;h2&gt;二级标题&lt;/h2&gt;
-        &lt;p&gt;段落内容&lt;/p&gt;
-    &lt;/section&gt;
-
-    &lt;aside&gt;
-        &lt;p&gt;广告内容&lt;/p&gt;
-    &lt;/aside&gt;
-
-&lt;/section&gt;
-
-&lt;footer&gt;
-    &lt;p&gt;某某公司出品&lt;/p&gt;
-&lt;/footer&gt;
-</code></pre>
-<p>#查看网页大纲的工具<br>我们可以通过 <a href="http://h5o.github.io/">http://h5o.github.io/</a> 这个工具查看一个网页的大纲。</p>
-<p>使用方法：</p>
+<h3 id="查看网页大纲的工具"><a href="#查看网页大纲的工具" class="headerlink" title="#查看网页大纲的工具"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#%E6%9F%A5%E7%9C%8B%E7%BD%91%E9%A1%B5%E5%A4%A7%E7%BA%B2%E7%9A%84%E5%B7%A5%E5%85%B7">#</a>查看网页大纲的工具</h3><p>我们可以通过 <a href="http://h5o.github.io/">http://h5o.github.io/</a> 这个工具查看一个网页的大纲。</p>
+<p><strong>使用方法</strong>：</p>
 <p>（1）将网址 <a href="http://h5o.github.io/">http://h5o.github.io/</a> 保存到书签栏</p>
 <p>（2）去目标网页，点击书签栏的网址，即可查看该网页的大纲。</p>
 <p>这个工具非常好用，既可以查看网页的大纲，也可以查看 markdown 在线文档的结构。</p>
-<p>#html 元素的分类<br>按照样式分类：</p>
-<p>块级元素</p>
-<p>行内元素</p>
-<p>inline-block：比如form表单元素。对外的表现是行内元素（不会独占一行），对内的表现是块级元素（可以设置宽高）。</p>
+<h2 id="html-元素的分类"><a href="#html-元素的分类" class="headerlink" title="#html 元素的分类"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#html-%E5%85%83%E7%B4%A0%E7%9A%84%E5%88%86%E7%B1%BB">#</a>html 元素的分类</h2><p>按照样式分类：</p>
+<ul>
+<li>块级元素</li>
+<li>行内元素</li>
+<li>inline-block：比如<code>form</code>表单元素。对外的表现是行内元素（不会独占一行），对内的表现是块级元素（可以设置宽高）。</li>
+</ul>
 <p>按照内容分类：</p>
+<p><img src="http://img.smyhvae.com/20191003_1946.png" alt="img"></p>
 <p>图片来源：<a href="https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content">https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content</a></p>
-<p>#html 元素的嵌套关系<br>块级元素可以包含行内元素。</p>
-<p>块级元素不一定能包含块级元素。比如 div 中可以包含 div，但 p 标签中不能包含 div。</p>
-<p>行内元素一般不能包含块级元素。比如 span 中不能包含 div。但有个特例：在 HTML5 中， a 标签中可以包含 div。</p>
-<p>注意：在 HTML5 中 a &gt; div 是合法的， div &gt; a &gt; div是不合法的 ；但是在 html 4.0.1 中， a &gt; div 仍然是不合法的。</p>
-<p>#html 元素的默认样式和 CSS Reset<br>比如下拉框这种比较复杂的元素，是自带默认样式的。如果没有这个默认样式，则该元素在页面上不会有任何表现，则必然增加一些工作量。</p>
+<h2 id="html-元素的嵌套关系"><a href="#html-元素的嵌套关系" class="headerlink" title="#html 元素的嵌套关系"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#html-%E5%85%83%E7%B4%A0%E7%9A%84%E5%B5%8C%E5%A5%97%E5%85%B3%E7%B3%BB">#</a>html 元素的嵌套关系</h2><ul>
+<li>块级元素可以包含行内元素。</li>
+<li>块级元素<strong>不一定</strong>能包含块级元素。比如 div 中可以包含 div，但 p 标签中不能包含 div。</li>
+<li>行内元素<strong>一般</strong>不能包含块级元素。比如 span 中不能包含 div。但有个特例：在 HTML5 中， a 标签中可以包含 div。</li>
+</ul>
+<p><strong>注意</strong>：在 HTML5 中 <code>a &gt; div</code> 是合法的， <code>div &gt; a &gt; div</code>是不合法的 ；但是在 html 4.0.1 中， <code>a &gt; div</code> 仍然是不合法的。</p>
+<h2 id="html-元素的默认样式和-CSS-Reset"><a href="#html-元素的默认样式和-CSS-Reset" class="headerlink" title="#html 元素的默认样式和 CSS Reset"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#html-%E5%85%83%E7%B4%A0%E7%9A%84%E9%BB%98%E8%AE%A4%E6%A0%B7%E5%BC%8F%E5%92%8C-css-reset">#</a>html 元素的默认样式和 CSS Reset</h2><p>比如下拉框这种比较复杂的元素，是自带默认样式的。如果没有这个默认样式，则该元素在页面上不会有任何表现，则必然增加一些工作量。</p>
 <p>同时，默认样式也会带来一些问题：比如，有些默认样式我们是不需要的；有些默认样式甚至无法去掉。</p>
-<p>如果我们不需要默认的样式，这里就需要引入一个概念：CSS Reset。</p>
-<p>#常见的 CSS Reset 方案<br>方案一：</p>
+<p>如果我们不需要默认的样式，这里就需要引入一个概念：<strong>CSS Reset</strong>。</p>
+<h3 id="常见的-CSS-Reset-方案"><a href="#常见的-CSS-Reset-方案" class="headerlink" title="#常见的 CSS Reset 方案"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#%E5%B8%B8%E8%A7%81%E7%9A%84-css-reset-%E6%96%B9%E6%A1%88">#</a>常见的 CSS Reset 方案</h3><p><strong>方案一</strong>：</p>
 <p>CSS Tools: Reset CSS。链接：<a href="https://meyerweb.com/eric/tools/css/reset/">https://meyerweb.com/eric/tools/css/reset/</a></p>
-<p>方案二：</p>
+<p><strong>方案二</strong>：</p>
 <p>雅虎的 CSS Reset。链接：<a href="https://yuilibrary.com/yui/docs/cssreset/">https://yuilibrary.com/yui/docs/cssreset/</a></p>
 <p>我们可以直接通过 CDN 的方式引入：</p>
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-方式三：（比较有争议）
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>*{<br>    margin: 0;<br>    padding: 0;<br>}</p>
+
+<p><strong>方式三</strong>：（比较有争议）</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 <p>上面何种写法，比较简洁，但也有争议。有争议的地方在于，可能会导致 css 选择器的性能问题。</p>
-<p>#Normalize.css<br>上面的几种 css reset 的解决思路是：将所有的默认样式清零。</p>
-<p>但是，Normalize.css 的思路是：既然浏览器提供了这些默认样式，那它就是有意义的。既然不同浏览器的默认样式不一致，那么，Normalize.css就将这些默认样式设置为一致。</p>
-<p>#html 常见面试题<br>#doctype 的意义是什么<br>让浏览器以标准模式渲染</p>
-<p>让浏览器知道元素的合法性</p>
-<p>#HTML、XHTML、HTML5的区别<br>HTML 属于 SGML</p>
-<p>XHTML 属于 XML，是 HTML 进行 XML 严格化的结果</p>
-<p>HTML5 不属于SGML，也不属于 XML（HTML5有自己独立的一套规范），比 XHTML 宽松。</p>
-<p>#HTML5 有什么新的变化<br>新的语义化元素</p>
-<p>表单增强</p>
-<p>新的API：离线、音视频、图形、实时通信、本地存储、设备能力等。</p>
-<p>#em 和 i 的区别<br>共同点：二者都是表示斜体。</p>
+<h3 id="Normalize-css"><a href="#Normalize-css" class="headerlink" title="#Normalize.css"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#normalize-css">#</a>Normalize.css</h3><p>上面的几种 css reset 的解决思路是：将所有的默认样式清零。</p>
+<p>但是，<a href="https://necolas.github.io/normalize.css/">Normalize.css</a> 的思路是：既然浏览器提供了这些默认样式，那它就是有意义的。<strong>既然不同浏览器的默认样式不一致，那么，<code>Normalize.css</code>就将这些默认样式设置为一致</strong>。</p>
+<h2 id="html-常见面试题"><a href="#html-常见面试题" class="headerlink" title="#html 常见面试题"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#html-%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98">#</a>html 常见面试题</h2><h3 id="doctype-的意义是什么"><a href="#doctype-的意义是什么" class="headerlink" title="#doctype 的意义是什么"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#doctype-%E7%9A%84%E6%84%8F%E4%B9%89%E6%98%AF%E4%BB%80%E4%B9%88">#</a>doctype 的意义是什么</h3><ul>
+<li>让浏览器以标准模式渲染</li>
+<li>让浏览器知道元素的合法性</li>
+</ul>
+<h3 id="HTML、XHTML、HTML5的区别"><a href="#HTML、XHTML、HTML5的区别" class="headerlink" title="#HTML、XHTML、HTML5的区别"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#html%E3%80%81xhtml%E3%80%81html5%E7%9A%84%E5%8C%BA%E5%88%AB">#</a>HTML、XHTML、HTML5的区别</h3><ul>
+<li>HTML 属于 SGML</li>
+<li>XHTML 属于 XML，是 HTML 进行 XML 严格化的结果</li>
+<li>HTML5 不属于SGML，也不属于 XML（HTML5有自己独立的一套规范），比 XHTML 宽松。</li>
+</ul>
+<h3 id="HTML5-有什么新的变化"><a href="#HTML5-有什么新的变化" class="headerlink" title="#HTML5 有什么新的变化"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#html5-%E6%9C%89%E4%BB%80%E4%B9%88%E6%96%B0%E7%9A%84%E5%8F%98%E5%8C%96">#</a>HTML5 有什么新的变化</h3><ul>
+<li>新的语义化元素</li>
+<li>表单增强</li>
+<li>新的API：离线、音视频、图形、实时通信、本地存储、设备能力等。</li>
+</ul>
+<h3 id="em-和-i-的区别"><a href="#em-和-i-的区别" class="headerlink" title="#em 和 i 的区别"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#em-%E5%92%8C-i-%E7%9A%84%E5%8C%BA%E5%88%AB">#</a>em 和 i 的区别</h3><p>共同点：二者都是表示斜体。</p>
 <p>区别：</p>
-<p>em 是语义化的标签，表示强调。</p>
-<p>i 是纯样式的标签，表示斜体。HTML5 中不推荐使用。</p>
-<p>#语义化的意义是什么<br>开发者容易理解，便于维护。</p>
-<p>机器（搜索引擎、读屏软件等）容易理解结构</p>
-<p>有助于 SEO</p>
-<p>#哪些元素可以自闭和<br>自闭和的元素中不能再嵌入别的元素。且 HTML5 中要求加斜杠。</p>
-<p>表单元素 input</p>
-<p>图片 img</p>
-<p>br、hr</p>
-<p>meta、link</p>
-<p>#form 表单的作用<br>直接提交表单</p>
-<p>使用 submit / reset 按钮</p>
-<p>便于浏览器保存表单</p>
-<p>第三方库（比如 jQuery）可以整体获取值</p>
-<p>第三方库可以进行表单验证</p>
+<ul>
+<li>em 是语义化的标签，表示强调。</li>
+<li>i 是纯样式的标签，表示斜体。HTML5 中不推荐使用。</li>
+</ul>
+<h3 id="语义化的意义是什么"><a href="#语义化的意义是什么" class="headerlink" title="#语义化的意义是什么"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#%E8%AF%AD%E4%B9%89%E5%8C%96%E7%9A%84%E6%84%8F%E4%B9%89%E6%98%AF%E4%BB%80%E4%B9%88">#</a>语义化的意义是什么</h3><ul>
+<li>开发者容易理解，便于维护。</li>
+<li>机器（搜索引擎、读屏软件等）容易理解结构</li>
+<li>有助于 SEO</li>
+</ul>
+<h3 id="哪些元素可以自闭和"><a href="#哪些元素可以自闭和" class="headerlink" title="#哪些元素可以自闭和"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#%E5%93%AA%E4%BA%9B%E5%85%83%E7%B4%A0%E5%8F%AF%E4%BB%A5%E8%87%AA%E9%97%AD%E5%92%8C">#</a>哪些元素可以自闭和</h3><blockquote>
+<p>自闭和的元素中不能再嵌入别的元素。且 HTML5 中要求加斜杠。</p>
+</blockquote>
+<ul>
+<li>表单元素 input</li>
+<li>图片 img</li>
+<li>br、hr</li>
+<li>meta、link</li>
+</ul>
+<h3 id="form-表单的作用"><a href="#form-表单的作用" class="headerlink" title="#form 表单的作用"></a><a href="10-HTML%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE.html#form-%E8%A1%A8%E5%8D%95%E7%9A%84%E4%BD%9C%E7%94%A8">#</a>form 表单的作用</h3><ul>
+<li>直接提交表单</li>
+<li>使用 submit / reset 按钮</li>
+<li>便于浏览器保存表单</li>
+<li>第三方库（比如 jQuery）可以整体获取值</li>
+<li>第三方库可以进行表单验证</li>
+</ul>
 <p>所以，如果我们是通过 Ajax 提交表单数据，也建议加上 form。</p>
 ]]></content>
       <categories>
@@ -2797,12 +2823,12 @@ base 标签用于指定基础的路径。指定之后，所有的 a 链接都是
 <p>1、从服务器上下载文件<br>scp username@servername:/path/filename /var/www/local_dir（本地目录）</p>
 <span id="more"></span>
 
-<p> 例如scp <a href="mailto:&#114;&#111;&#111;&#116;&#x40;&#x31;&#x39;&#50;&#x2e;&#49;&#x36;&#x38;&#x2e;&#x30;&#46;&#x31;&#48;&#49;">&#114;&#111;&#111;&#116;&#x40;&#x31;&#x39;&#50;&#x2e;&#49;&#x36;&#x38;&#x2e;&#x30;&#46;&#x31;&#48;&#49;</a>:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</p>
+<p> 例如scp <a href="mailto:&#x72;&#x6f;&#x6f;&#x74;&#x40;&#49;&#x39;&#x32;&#46;&#49;&#x36;&#x38;&#46;&#x30;&#46;&#x31;&#48;&#49;">&#x72;&#x6f;&#x6f;&#x74;&#x40;&#49;&#x39;&#x32;&#46;&#49;&#x36;&#x38;&#46;&#x30;&#46;&#x31;&#48;&#49;</a>:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</p>
 <p>2、上传本地文件到服务器<br>scp /path/filename username@servername:/path   </p>
-<p>例如scp /var/www/test.php  <a href="mailto:&#114;&#111;&#x6f;&#x74;&#64;&#49;&#57;&#50;&#x2e;&#49;&#54;&#x38;&#x2e;&#x30;&#46;&#49;&#48;&#x31;">&#114;&#111;&#x6f;&#x74;&#64;&#49;&#57;&#50;&#x2e;&#49;&#54;&#x38;&#x2e;&#x30;&#46;&#49;&#48;&#x31;</a>:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中</p>
+<p>例如scp /var/www/test.php  <a href="mailto:&#114;&#111;&#111;&#x74;&#64;&#49;&#x39;&#50;&#x2e;&#x31;&#54;&#x38;&#46;&#48;&#46;&#49;&#48;&#49;">&#114;&#111;&#111;&#x74;&#64;&#49;&#x39;&#50;&#x2e;&#x31;&#54;&#x38;&#46;&#48;&#46;&#49;&#48;&#49;</a>:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中</p>
 <p>3、从服务器下载整个目录<br>scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</p>
-<p>例如:scp -r <a href="mailto:&#x72;&#x6f;&#111;&#x74;&#64;&#x31;&#x39;&#50;&#46;&#49;&#54;&#x38;&#46;&#48;&#x2e;&#x31;&#48;&#x31;">&#x72;&#x6f;&#111;&#x74;&#64;&#x31;&#x39;&#50;&#46;&#49;&#54;&#x38;&#46;&#48;&#x2e;&#x31;&#48;&#x31;</a>:/var/www/test  /var/www/  </p>
-<p>4、上传目录到服务器<br>scp  -r local_dir username@servername:remote_dir<br>例如：scp -r test  <a href="mailto:&#x72;&#111;&#x6f;&#x74;&#x40;&#49;&#x39;&#x32;&#46;&#49;&#54;&#x38;&#46;&#x30;&#x2e;&#49;&#48;&#x31;">&#x72;&#111;&#x6f;&#x74;&#x40;&#49;&#x39;&#x32;&#46;&#49;&#54;&#x38;&#46;&#x30;&#x2e;&#49;&#48;&#x31;</a>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
+<p>例如:scp -r <a href="mailto:&#114;&#x6f;&#x6f;&#x74;&#x40;&#49;&#57;&#50;&#46;&#49;&#54;&#x38;&#46;&#x30;&#x2e;&#49;&#x30;&#49;">&#114;&#x6f;&#x6f;&#x74;&#x40;&#49;&#57;&#50;&#46;&#49;&#54;&#x38;&#46;&#x30;&#x2e;&#49;&#x30;&#49;</a>:/var/www/test  /var/www/  </p>
+<p>4、上传目录到服务器<br>scp  -r local_dir username@servername:remote_dir<br>例如：scp -r test  <a href="mailto:&#x72;&#111;&#111;&#x74;&#x40;&#49;&#57;&#x32;&#46;&#49;&#x36;&#x38;&#x2e;&#x30;&#46;&#x31;&#x30;&#49;">&#x72;&#111;&#111;&#x74;&#x40;&#49;&#57;&#x32;&#46;&#49;&#x36;&#x38;&#x2e;&#x30;&#46;&#x31;&#x30;&#49;</a>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
 <hr>
 <p>本文介绍几种常见的方法，把文件上传到Linux服务器中！</p>
 <p>常见有使用：scp命令、xshell软件里的xftp程序、U盘挂载、服务器自带的lrzsz程序。</p>
