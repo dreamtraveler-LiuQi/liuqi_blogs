@@ -453,12 +453,12 @@
 <p>1、从服务器上下载文件<br>scp username@servername:/path/filename /var/www/local_dir（本地目录）</p>
 <span id="more"></span>
 
-<p> 例如scp <a href="mailto:&#114;&#x6f;&#x6f;&#116;&#x40;&#49;&#x39;&#50;&#46;&#x31;&#54;&#x38;&#x2e;&#x30;&#46;&#49;&#48;&#49;">&#114;&#x6f;&#x6f;&#116;&#x40;&#49;&#x39;&#50;&#46;&#x31;&#54;&#x38;&#x2e;&#x30;&#46;&#49;&#48;&#49;</a>:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</p>
+<p> 例如scp <a href="mailto:&#x72;&#x6f;&#x6f;&#x74;&#x40;&#x31;&#57;&#50;&#46;&#49;&#54;&#56;&#46;&#48;&#x2e;&#49;&#x30;&#49;">&#x72;&#x6f;&#x6f;&#x74;&#x40;&#x31;&#57;&#50;&#46;&#49;&#54;&#56;&#46;&#48;&#x2e;&#49;&#x30;&#49;</a>:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</p>
 <p>2、上传本地文件到服务器<br>scp /path/filename username@servername:/path   </p>
-<p>例如scp /var/www/test.php  <a href="mailto:&#114;&#111;&#111;&#116;&#64;&#x31;&#x39;&#50;&#46;&#x31;&#54;&#56;&#46;&#x30;&#x2e;&#x31;&#48;&#x31;">&#114;&#111;&#111;&#116;&#64;&#x31;&#x39;&#50;&#46;&#x31;&#54;&#56;&#46;&#x30;&#x2e;&#x31;&#48;&#x31;</a>:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中</p>
+<p>例如scp /var/www/test.php  <a href="mailto:&#x72;&#x6f;&#x6f;&#116;&#x40;&#49;&#x39;&#50;&#46;&#x31;&#54;&#x38;&#x2e;&#x30;&#46;&#x31;&#48;&#x31;">&#x72;&#x6f;&#x6f;&#116;&#x40;&#49;&#x39;&#50;&#46;&#x31;&#54;&#x38;&#x2e;&#x30;&#46;&#x31;&#48;&#x31;</a>:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中</p>
 <p>3、从服务器下载整个目录<br>scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</p>
-<p>例如:scp -r <a href="mailto:&#x72;&#x6f;&#x6f;&#x74;&#64;&#49;&#57;&#50;&#46;&#x31;&#54;&#56;&#46;&#x30;&#x2e;&#x31;&#x30;&#49;">&#x72;&#x6f;&#x6f;&#x74;&#64;&#49;&#57;&#50;&#46;&#x31;&#54;&#56;&#46;&#x30;&#x2e;&#x31;&#x30;&#49;</a>:/var/www/test  /var/www/  </p>
-<p>4、上传目录到服务器<br>scp  -r local_dir username@servername:remote_dir<br>例如：scp -r test  <a href="mailto:&#x72;&#111;&#111;&#x74;&#x40;&#x31;&#57;&#50;&#x2e;&#x31;&#x36;&#56;&#x2e;&#x30;&#x2e;&#x31;&#x30;&#49;">&#x72;&#111;&#111;&#x74;&#x40;&#x31;&#57;&#50;&#x2e;&#x31;&#x36;&#56;&#x2e;&#x30;&#x2e;&#x31;&#x30;&#49;</a>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
+<p>例如:scp -r <a href="mailto:&#114;&#x6f;&#x6f;&#x74;&#64;&#49;&#x39;&#x32;&#x2e;&#49;&#54;&#x38;&#46;&#x30;&#x2e;&#49;&#x30;&#x31;">&#114;&#x6f;&#x6f;&#x74;&#64;&#49;&#x39;&#x32;&#x2e;&#49;&#54;&#x38;&#46;&#x30;&#x2e;&#49;&#x30;&#x31;</a>:/var/www/test  /var/www/  </p>
+<p>4、上传目录到服务器<br>scp  -r local_dir username@servername:remote_dir<br>例如：scp -r test  <a href="mailto:&#114;&#111;&#x6f;&#116;&#64;&#49;&#x39;&#50;&#46;&#x31;&#54;&#56;&#46;&#x30;&#46;&#x31;&#x30;&#x31;">&#114;&#111;&#x6f;&#116;&#64;&#49;&#x39;&#50;&#46;&#x31;&#54;&#56;&#46;&#x30;&#46;&#x31;&#x30;&#x31;</a>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
 <hr>
 <p>本文介绍几种常见的方法，把文件上传到Linux服务器中！</p>
 <p>常见有使用：scp命令、xshell软件里的xftp程序、U盘挂载、服务器自带的lrzsz程序。</p>
@@ -542,6 +542,281 @@
       </categories>
       <tags>
         <tag>react.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx反向代理配置总结</title>
+    <url>/liuqi_blogs/2022/02/21/Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>在前后端分离项目中，可以通过前端配置 Nginx 来解决跨域问题。</p>
+<blockquote>
+<p>前端页面 <code>mysite.com</code>，后台接口是在 <code>myserver.com</code> 域下的 <code>myserver.com/querytags</code> 接口，当在页面里直接请求，浏览器会报跨域的错误。为了绕开浏览器的跨域安全限制，现在需要将请求的域名改成 <code>mysite.com</code>，同时约定一个 URL 规则来表明代理请求的身份，然后 Nginx 通过匹配该规则，将请求代理回原来的域。</p>
+</blockquote>
+<span id="more"></span>
+
+<p>本文总结一下 Nginx 反向代理匹配规则。</p>
+<h2 id="location-匹配规则"><a href="#location-匹配规则" class="headerlink" title="location 匹配规则"></a>location 匹配规则</h2><p>Nginx 官方文档给出 location 语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">location [=|~|~*|^~] uri &#123; … &#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中，方括号中的四种标识符是可选项，用来改变请求字符串和 uri 的匹配方式。uri 是待匹配的请求字符串，可以是不包含正则的字符串，这种模式被称为 “标准的 uri”；也可以包含正则，这种模式被称为” 正则 uri”。</p>
+<h3 id="可选标识符"><a href="#可选标识符" class="headerlink" title="可选标识符"></a>可选标识符</h3><table>
+<thead>
+<tr>
+<th align="left">标识符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>=</code></td>
+<td align="left">精确匹配；用于标准 uri 前，要求请求字符串和 uri 严格匹配。如果匹配成功，就停止匹配，立即执行该 location 里面的请求。</td>
+</tr>
+<tr>
+<td align="left"><code>~</code></td>
+<td align="left">正则匹配；用于正则 uri 前，表示 uri 里面包含正则，并且区分大小写。</td>
+</tr>
+<tr>
+<td align="left"><code>~*</code></td>
+<td align="left">正则匹配；用于正则 uri 前，表示 uri 里面包含正则，不区分大小写。</td>
+</tr>
+<tr>
+<td align="left"><code>^~</code></td>
+<td align="left">非正则匹配；用于标准 uri 前，Nginx 服务器匹配到前缀最多的 uri 后就结束，该模式匹配成功后，不会使用正则匹配。</td>
+</tr>
+<tr>
+<td align="left">无</td>
+<td align="left">普通匹配（最长字符匹配）；与 location 顺序无关，是按照匹配的长短来取匹配结果。若完全匹配，就停止匹配。</td>
+</tr>
+</tbody></table>
+<h3 id="location-匹配顺序"><a href="#location-匹配顺序" class="headerlink" title="location 匹配顺序"></a>location 匹配顺序</h3><p><strong>总原则：先前缀字符串，再正则表达式</strong>。</p>
+<p><strong>不管配置文件中的 location 顺序怎么写，在匹配时，都会先将所有前缀字符串拎出来，放在第一位；然后再去找所有正则表达式，作为第二位</strong>。</p>
+<ol>
+<li>首先匹配前缀字符串。前缀字符串有以下几种形式（举例）：<ul>
+<li>a、<code>location = /data/ &#123;&#125;</code></li>
+<li>b、<code>location ^~ /data/ &#123;&#125;</code></li>
+<li>c、<code>location /data/ &#123;&#125;</code></li>
+</ul>
+</li>
+<li>然后匹配正则表达式。正则表达式的几种形式（举例）：<ul>
+<li>d、<code>location ~ \.html? &#123;&#125;</code></li>
+<li>e、<code>location ~* \.html? &#123;&#125;</code></li>
+</ul>
+</li>
+</ol>
+<p>匹配顺序：</p>
+<ul>
+<li>a 的权限最大，一旦匹配到，立即停止，直接使用对应的 location。</li>
+<li>b 的权限次之，一旦匹配到，就不再检查正则表达式。相当于打断了后续。</li>
+<li>c 如果匹配到了，不会立即停止，而是会先将它存储起来，然后继续往下匹配。</li>
+<li>d 如果匹配到了，立即停止，直接使用对应的 location；</li>
+<li>d 如果没有匹配，继续往下找。</li>
+<li>e 如果匹配到了，立即停止，直接使用对应的 location；</li>
+<li>e 如果没有匹配，就使用先前存储的那个前缀字符串。</li>
+</ul>
+<p>也就是说，<code>location /data/ &#123;&#125;</code> 这种模式是等级最低的。实在匹配不到了，才勉强使用它。</p>
+<h3 id="最长匹配"><a href="#最长匹配" class="headerlink" title="最长匹配"></a>最长匹配</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    location /images/ &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一个请求为：<code>http://www.example.com/images/a.png</code></p>
+<p>对于 <code>/images/a.png</code> 这个 URI 来说，上面的 2 个 location 中，<code>location /images/</code> 是最长匹配。虽然 <code>location /</code> 也能匹配，但不是最长的。</p>
+<p>由于不是精确匹配，Nginx 此时会先将这个最长匹配保存起来。</p>
+<ul>
+<li>如果后面配置了正则表达式，那么 Nginx 会继续向下匹配正则表达式。</li>
+<li>如果后面没有配置正则表达式，Nginx 就会使用刚才保存的最长的那个前缀匹配，也就是 <code>location /images/</code> 对应的地方。</li>
+</ul>
+<h2 id="proxy-pass-使用"><a href="#proxy-pass-使用" class="headerlink" title="proxy_pass 使用"></a><code>proxy_pass</code> 使用</h2><p>下面是几个例子。</p>
+<h3 id="proxy-pass-直接映射到主机，没有其他路径"><a href="#proxy-pass-直接映射到主机，没有其他路径" class="headerlink" title="proxy_pass 直接映射到主机，没有其他路径"></a><code>proxy_pass</code> 直接映射到主机，没有其他路径</h3><table>
+<thead>
+<tr>
+<th align="left">location</th>
+<th align="left"><code>proxy_pass</code></th>
+<th align="left">实际访问目标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>/nginx_location/</code></td>
+<td align="left"><code>http://server</code></td>
+<td align="left"><code>http://server/nginx_location/some/path</code></td>
+</tr>
+<tr>
+<td align="left"><code>/nginx_location/</code></td>
+<td align="left"><code>http://server/</code></td>
+<td align="left"><code>http://server/some/path</code></td>
+</tr>
+<tr>
+<td align="left"><code>/nginx_location</code></td>
+<td align="left"><code>http://server</code></td>
+<td align="left"><code>http://server/nginx_location/some/path</code></td>
+</tr>
+<tr>
+<td align="left"><code>/nginx_location</code></td>
+<td align="left"><code>http://server/</code></td>
+<td align="left"><code>http://server//some/path</code></td>
+</tr>
+</tbody></table>
+<h3 id="proxy-pass-直接映射到主机的-test"><a href="#proxy-pass-直接映射到主机的-test" class="headerlink" title="proxy_pass 直接映射到主机的 /test"></a><code>proxy_pass</code> 直接映射到主机的 /test</h3><table>
+<thead>
+<tr>
+<th align="left">location</th>
+<th align="left"><code>proxy_pass</code></th>
+<th align="left">实际访问目标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>/nginx_location/</code></td>
+<td align="left"><code>http://server/test</code></td>
+<td align="left"><code>http://server/testsome/path</code></td>
+</tr>
+<tr>
+<td align="left"><code>/nginx_location/</code></td>
+<td align="left"><code>http://server/test/</code></td>
+<td align="left"><code>http://server/test/some/path</code></td>
+</tr>
+<tr>
+<td align="left"><code>/nginx_location</code></td>
+<td align="left"><code>http://server/test</code></td>
+<td align="left"><code>http://server/test/some/path</code></td>
+</tr>
+<tr>
+<td align="left"><code>/nginx_location</code></td>
+<td align="left"><code>http://server/test/</code></td>
+<td align="left"><code>http://server/test//some/path</code></td>
+</tr>
+</tbody></table>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>其实根本没这么复杂，只有两种情况：</p>
+<ul>
+<li>目标地址中不带 uri。即 <code>proxy_pass</code> 的参数形如 <code>http://127.0.0.1:8090</code>。此时新的目标 url 中，<strong>匹配的 uri 部分不做修改，原来是什么样就是什么样</strong>。</li>
+<li>目标地址中带 uri。即 <code>proxy_pass</code> 的参数形如 <code>http://127.0.0.1:8090/dir1/dir2</code>。此时新的目标 url 中，<strong>匹配的 uri 部分将会被修改为该参数中的 uri</strong>，如 <code>http://127.0.0.1:8888/dir1/dir2</code>。</li>
+</ul>
+<p>有人说，你没有讨论 ip 和端口后带不带 <code>/</code> 的区别。其实是不需要的，因为 <code>/</code> 本身就是一个 uri，很明显属于上面的第二种情况。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.jianshu.com/p/73e2cd39722c">Nginx 反向代理中 / 符号的一些坑</a></li>
+<li><a href="https://pureage.info/2013/10/31/130.html">关于 proxy_pass 的参数路径问题</a></li>
+<li><a href="https://www.cnblogs.com/t-road/p/13055355.html">nginx 的 location 匹配顺序</a></li>
+<li><a href="https://blog.csdn.net/youcijibi/article/details/88201629">nginx 配置中 location 匹配规则详解</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SpringCloudGateway解决前端请求跨域问题</title>
+    <url>/liuqi_blogs/2022/02/03/SpringCloudGateway%E8%A7%A3%E5%86%B3%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>在前后端分离的项目中，一般都会碰到跨域问题，对于直接请求后端应用的情况，可以直接参考：<a href="https://tding.top/archives/17a727e7.html">Spring Boot 解决前端请求跨域问题</a>。</p>
+<p>而随着微服务架构概念的提出，API 网关成为了微服务架构的一个标配组件。所有的客户端都通过统一的网关接入微服务，在网关层处理所有非业务功能。</p>
+<p>因此，需要在网关这边处理跨域问题。</p>
+<span id="more"></span>
+
+
+<h2 id="Spring-Cloud-Gateway-解决跨域问题"><a href="#Spring-Cloud-Gateway-解决跨域问题" class="headerlink" title="Spring Cloud Gateway 解决跨域问题"></a>Spring Cloud Gateway 解决跨域问题</h2><p>在网关代码中增加配置类：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import org.springframework.context.annotation.Bean;</span><br><span class="line">import org.springframework.context.annotation.Configuration;</span><br><span class="line">import org.springframework.web.cors.CorsConfiguration;</span><br><span class="line">import org.springframework.web.cors.reactive.CorsWebFilter;</span><br><span class="line">import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;</span><br><span class="line">import org.springframework.web.util.pattern.PathPatternParser;</span><br><span class="line"></span><br><span class="line">@Configuration</span><br><span class="line">public class GwCorsFilter &#123;</span><br><span class="line">  @Bean</span><br><span class="line">  public CorsWebFilter corsFilter() &#123;</span><br><span class="line">    CorsConfiguration config = new CorsConfiguration();</span><br><span class="line">	  // 允许cookies跨域</span><br><span class="line">    config.setAllowCredentials(true); </span><br><span class="line">    // 允许向该服务器提交请求的URI，*表示全部允许，在SpringMVC中，如果设成*，会自动转成当前请求头中的Origin</span><br><span class="line">    config.addAllowedOrigin(&quot;*&quot;);</span><br><span class="line">    // 允许访问的头信息 *表示全部</span><br><span class="line">    config.addAllowedHeader(&quot;*&quot;);</span><br><span class="line">    // 预检请求的缓存时间（秒），即在这个时间段里，对于相同的跨域请求不会再预检了</span><br><span class="line">    config.setMaxAge(18000L);</span><br><span class="line">    // 允许的方法 可设置* 即允许全部http请求方法类型</span><br><span class="line">    config.addAllowedMethod(&quot;OPTIONS&quot;);</span><br><span class="line">    config.addAllowedMethod(&quot;HEAD&quot;);</span><br><span class="line">    config.addAllowedMethod(&quot;GET&quot;);</span><br><span class="line">    config.addAllowedMethod(&quot;PUT&quot;);</span><br><span class="line">    config.addAllowedMethod(&quot;POST&quot;);</span><br><span class="line">    config.addAllowedMethod(&quot;DELETE&quot;);</span><br><span class="line">    config.addAllowedMethod(&quot;PATCH&quot;);</span><br><span class="line">    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource(new PathPatternParser());</span><br><span class="line">    source.registerCorsConfiguration(&quot;/**&quot;, config);</span><br><span class="line">    return new CorsWebFilter(source);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果出现以下错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">The ‘Access-Control-Allow-Origin’ header contains multiple values “*, *”, but only one is allowed.</span><br></pre></td></tr></table></figure>
+
+<p>这是因为后台接口也配置了跨域，重复配置导致的，一个比较简单的办法就是把后台接口的跨域配置去掉。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://blog.csdn.net/leilei1366615/article/details/109171478">spring-cloud（十三）GateWay 跨域、HTTP 超时配置</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端，性能优化</category>
+      </categories>
+      <tags>
+        <tag>前端，性能优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue中chunk-vendors.js文件过大问题</title>
+    <url>/liuqi_blogs/2022/02/03/Vue%E4%B8%ADchunk-vendors-js%E6%96%87%E4%BB%B6%E8%BF%87%E5%A4%A7%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>在 Vue 前端项目开发中，发现每次都会有一个很大的 <code>chunk-vendors.js</code> 文件要载入，这也使得页面加载时间变长。</p>
+<span id="more"></span>
+
+<h2 id="chunk-vendors-js-是什么"><a href="#chunk-vendors-js-是什么" class="headerlink" title="chunk-vendors.js 是什么"></a><code>chunk-vendors.js</code> 是什么</h2><p>顾名思义，<code>chunk-vendors.js</code> 文件其实包含的是除了自己项目模块外的第三方的依赖，也就是 <code>node_modules</code> 文件夹里边的内容。</p>
+<h2 id="chunk-vendors-js-分析"><a href="#chunk-vendors-js-分析" class="headerlink" title="chunk-vendors.js 分析"></a><code>chunk-vendors.js</code> 分析</h2><p>我们可以通过插件 <code>webpack-bundle-analyzer</code> 来可视化地查看 <code>chunk-vendors.js</code> 文件的内容。</p>
+<p>安装插件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save-dev webpack-bundle-analyzer</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>vue.config.js</code> 中引入这插件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const BundleAnalyzerPlugin = require(&#x27;webpack-bundle-analyzer&#x27;).BundleAnalyzerPlugin;</span><br><span class="line">module.exports=&#123;</span><br><span class="line">    configureWebpack:config =&gt;&#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            plugins:[</span><br><span class="line">                // 使用默认配置</span><br><span class="line">                new BundleAnalyzerPlugin()</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>未完待续…</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://stackoverflow.com/questions/55054444/what-is-the-chunk-vendors-js-file-and-how-is-it-created-webpack/56272461">What is the chunk-vendors.js file and how is it created? (Webpack)</a></li>
+<li><a href="https://juejin.cn/post/6844904190083350542">『Webpack 系列』—— externals 用法详解</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端，性能优化</category>
+      </categories>
+      <tags>
+        <tag>vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue项目优化-代码压缩</title>
+    <url>/liuqi_blogs/2022/01/21/Vue%E9%A1%B9%E7%9B%AE%E4%BC%98%E5%8C%96-%E4%BB%A3%E7%A0%81%E5%8E%8B%E7%BC%A9/</url>
+    <content><![CDATA[<p>网站应用的性能优化对于提高用户留存、转化率等都有积极影响。而减少传输大小是提高加载性能的一个常见方法。</p>
+<p>本文介绍下 Vue 项目开启 gzip 压缩的方法。</p>
+<h2 id="Vue-项目开启-gzip-压缩"><a href="#Vue-项目开启-gzip-压缩" class="headerlink" title="Vue 项目开启 gzip 压缩"></a>Vue 项目开启 gzip 压缩</h2><h3 id="安装-compression-webpack-plugin"><a href="#安装-compression-webpack-plugin" class="headerlink" title="安装 compression-webpack-plugin"></a>安装 <code>compression-webpack-plugin</code></h3><span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save-dev compression-webpack-plugin</span><br></pre></td></tr></table></figure>
+
+<p>这里有可能会碰到这个错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Cannot read property &#x27;tapPromise&#x27; of undefined</span><br></pre></td></tr></table></figure>
+
+<p>这是因为 <code>compression-webpack-plugin</code> 这个版本高了，需要降低版本，因此，我们可以先卸载掉之前安装的版本，然后指定低版本安装。经过试验，6.1.1 版本是可以正常运行的：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save-dev compression-webpack-plugin@6.1.1</span><br></pre></td></tr></table></figure>
+
+<h3 id="vue-config-js-配置-configureWebpack"><a href="#vue-config-js-配置-configureWebpack" class="headerlink" title="vue.config.js 配置 configureWebpack"></a><code>vue.config.js</code> 配置 configureWebpack</h3><blockquote>
+<p><code>vue.config.js</code> 是 vue-cli3 之后新增的一个功能，再这个版本里面如果要配置 webpack 相关的属性，就需要自己在项目根目录新建 <code>vue.config.js</code> 这个文件，然后在该文件里面去写入你需要的配置等等。（**配置 vue-cli3 项目，可以说是 all in <code>vue.config.js</code>**）</p>
+</blockquote>
+<p>当然，封装、就一定会留个口给用户，去对底层进行自定义操作。<code>vue.config.js</code> 的配置项中，有两个口，configureWebpack 和 chainWebpack。</p>
+<p>configureWebpack 是调整 webpack 配置最简单的一种方式，可以新增也可以覆盖 cli 中的配置。</p>
+<blockquote>
+<p>Type: Object | Function</p>
+<ul>
+<li>如果这个值是一个对象，则会通过 webpack-merge 合并到最终的配置中。</li>
+<li>如果这个值是一个函数，则会接收被解析的配置作为参数。该函数及可以修改配置并不返回任何东西，也可以返回一个被克隆或合并过的配置版本。</li>
+</ul>
+</blockquote>
+<p><strong>这个属性特别之处就是，他有两种类型形态，但是又不能重复使用，而在某些情况既需要对象类型的配置，也需要函数类型的配置</strong>。</p>
+<p>这里我使用函数类型的配置，这样可以基于环境有条件地配置行为，进行一些逻辑处理，直接修改或新增配置。</p>
+<p>具体例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 引入compression-webpack-plugin</span><br><span class="line">const CompressionPlugin = require(&#x27;compression-webpack-plugin&#x27;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  configureWebpack:config =&gt;&#123;</span><br><span class="line">    // 仅在生产环境打包时对JS\CSS文件进行压缩</span><br><span class="line">    if(process.env.NODE_ENV === &#x27;production&#x27;)&#123;</span><br><span class="line">      config.plugins.push(</span><br><span class="line">        new CompressionPlugin(&#123;</span><br><span class="line">          /* [file]被替换为原始资产文件名。</span><br><span class="line">            [path]替换为原始资产的路径。</span><br><span class="line">            [dir]替换为原始资产的目录。</span><br><span class="line">            [name]被替换为原始资产的文件名。</span><br><span class="line">            [ext]替换为原始资产的扩展名。</span><br><span class="line">            [query]被查询替换。*/</span><br><span class="line">          filename: &#x27;[path].gz[query]&#x27;,</span><br><span class="line">          // 压缩算法</span><br><span class="line">          algorithm: &#x27;gzip&#x27;,</span><br><span class="line">          // 匹配文件</span><br><span class="line">          test: /\.js$|\.css$|\.html$/,</span><br><span class="line">          // 压缩超过此大小的文件，以字节为单位</span><br><span class="line">          threshold: 10240,</span><br><span class="line">          minRatio: 0.8,</span><br><span class="line">          // 是否删除原始文件只保留压缩后的文件</span><br><span class="line">          deleteOriginalAssets: false</span><br><span class="line">        &#125;)</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>配置了这个之后，打包可能会出现警告：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Conflict: Multiple assets emit different content to the same filename assets/js/.gz</span><br></pre></td></tr></table></figure>
+
+<p><strong>这是因为打包之后命名都是空</strong>。</p>
+<p>问题在于 <code>filename: &#39;[path].gz[query]&#39;</code> 这个配置，<strong>这个版本下（<code>&quot;compression-webpack-plugin&quot;: &quot;^6.1.1&quot;</code>）的配置应该修改为：<code>filename: &#39;[path][base].gz&#39;</code>。</strong></p>
+</blockquote>
+<p>在打包后的静态文件中，可以看到有<strong>很多<code>.gz</code> 的同名文件</strong>，这个就是 gzip 压缩后的文件，基本上可以压缩 3-5 倍左右。</p>
+<h3 id="nginx-开启-gzip"><a href="#nginx-开启-gzip" class="headerlink" title="nginx 开启 gzip"></a>nginx 开启 gzip</h3><p>核心配置代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gzip on; #开启或关闭gzip on off</span><br><span class="line">    gzip_disable &quot;msie6&quot;; #不使用gzip IE6</span><br><span class="line">    gzip_min_length 100k; #gzip压缩最小文件大小，超出进行压缩（自行调节）</span><br><span class="line">    gzip_buffers 4 16k; #buffer 不用修改</span><br><span class="line">    gzip_comp_level 8; #压缩级别:1-10，数字越大压缩的越好，时间也越长</span><br><span class="line">    gzip_types text/plain application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png; #  压缩文件类型</span><br><span class="line">    gzip_static on; # nginx 会优先匹配你的 gzip 文件来返回，如果没有就寻找相应资源进行 gzip 压缩再返回</span><br></pre></td></tr></table></figure>
+
+<p><code>gzip on</code> 这个配置作用是，当 nginx 服务器返回 <code>gzip_types</code> 中列出的内容类型时，先使用 gzip 进行压缩（当然，前提是请求方支持 gzip）。<strong>但是存在一个问题，返回内容是在请求服务器的时候使用 gzip 进行压缩的。对于同一个资源的不同请求，反复压缩，这无疑会增加服务器的 CPU 和内存消耗。</strong></p>
+<p>因此，一个更好的办法就是在 Vue 工程打包的时候就进行 gzip 压缩，也就是我们前面讲的通过 <code>compression-webpack-plugin</code> 插件配置在打包时进行 gzip 压缩，<strong>然后我们把 <code>gzip_static</code> 设置为 on，这样在访问资源的时候，如果存在<code>资源路径.gz</code> 的文件，则会直接返回该文件，其优先级高于动态的 gzip。</strong></p>
+<h2 id="查看是否已开启-gzip-压缩"><a href="#查看是否已开启-gzip-压缩" class="headerlink" title="查看是否已开启 gzip 压缩"></a>查看是否已开启 gzip 压缩</h2><p>Chrome 浏览器 F12 打开控制台，进入 Network 调试界面，在表头单击鼠标右键，勾选 <code>Response Headers -&gt; Content-Encoding</code> 后，在表头会多出 <code>Content-Encoding</code> 这一列，用于判断是否开启 gzip（如已开启 Gzip，Content-Encoding 会显示 gzip）。</p>
+<p>我们把鼠标移到这些请求的 Size 上会显示：<code>xxx transferred over network, resource size: xxx</code>。<strong>这里 <code>transferred over network</code> 是网络加载的资源大小，而 <code>resource size</code> 则是资源经过解压后的大小</strong>。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://juejin.cn/post/7023931548952952846">【vue 深入】项目打包之 gzip 压缩，减少体积，提升响应速度</a></li>
+<li><a href="https://blog.csdn.net/u014678583/article/details/112249324">vue TypeError: Cannot read property ‘tapPromise‘ of undefined</a></li>
+<li><a href="https://blog.csdn.net/weixin_41240940/article/details/113880492">vue-cli4 开发项目中开启 gzip 压缩，优化打包体积，提升加载速度</a></li>
+<li><a href="https://blog.csdn.net/weixin_42164539/article/details/110389256">vue 打包出现警告：Conflict: Multiple assets emit different content to the same filename assets/js/.gz</a></li>
+<li><a href="https://blog.csdn.net/playboyanta123/article/details/103528594">vue.config.js 配置之 configureWebpack (两种用法)</a></li>
+<li><a href="https://www.cnblogs.com/mark21/p/14118676.html">Vue 项目打包压缩：让页面更快响应</a></li>
+<li><a href="https://blog.csdn.net/weixin_44388523/article/details/106957280">Vue 项目优化 —— 如何查看是否已开启 Gzip 压缩</a></li>
+<li><a href="https://stackoverflow.com/posts/56043891/edit">What is the difference between “transferred” and “resources” in Chrome DevTools Network tab?</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端，性能优化</category>
+      </categories>
+      <tags>
+        <tag>前端，性能优化</tag>
       </tags>
   </entry>
   <entry>
@@ -947,11 +1222,6 @@ Markdown 还没有办法指定图片的高度与宽度，如果你需要的话�
       </tags>
   </entry>
   <entry>
-    <title>lorem ipsum</title>
-    <url>/liuqi_blogs/2020/01/02/sitemap/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>软件包管理工具scoop</title>
     <url>/liuqi_blogs/2020/02/22/scoop/</url>
     <content><![CDATA[<p>软件包管理工具scoop，类似chocolatey,chocolatey很多软件安装位置不固定, 会污染Path，推荐能用scoop安装。scoop会统一安装到一个路径下。chocolatey权限要求高, scoop 使用-g安装才需要管理员权限, 默认普通用户权限.</p>
@@ -997,6 +1267,11 @@ Markdown 还没有办法指定图片的高度与宽度，如果你需要的话�
       <tags>
         <tag>windows包管理工具</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>lorem ipsum</title>
+    <url>/liuqi_blogs/2020/01/02/sitemap/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Hexo-NexT Tag 插件的使用</title>
@@ -1140,6 +1415,319 @@ Markdown 还没有办法指定图片的高度与宽度，如果你需要的话�
       </tags>
   </entry>
   <entry>
+    <title>前端页面性能优化</title>
+    <url>/liuqi_blogs/2022/02/12/%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p>前端 Vue 工程的性能优化笔记。</p>
+<p>前端性能优化的目的是为了让用户访问网站的时候可以非常快的加载出来，常见的优化方法：减小资源大小、CDN 加速、浏览器缓存。</p>
+<h2 id="Vue-页面优化"><a href="#Vue-页面优化" class="headerlink" title="Vue 页面优化"></a>Vue 页面优化</h2><h3 id="v-for-优化"><a href="#v-for-优化" class="headerlink" title="v-for 优化"></a>v-for 优化</h3><h4 id="不在同一级使用-v-for、v-if"><a href="#不在同一级使用-v-for、v-if" class="headerlink" title="不在同一级使用 v-for、v-if"></a>不在同一级使用 v-for、v-if</h4><p>当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级，<strong>这意味着 v-if 将分别重复运行于每个 v-for 循环中</strong>。</p>
+<span id="more"></span>
+
+<p>要避免出现这种情况，则在外层嵌套 template，在这一层进行 v-if 判断，然后在内部进行 v-for 循环，如果条件出现在循环内部，可通过计算属性提前过滤掉那些不需要显示的项。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt; </span><br><span class="line">&lt;html&gt; </span><br><span class="line">&lt;head&gt; </span><br><span class="line">    &lt;title&gt;Vue事件处理&lt;/title&gt; </span><br><span class="line">&lt;/head&gt; </span><br><span class="line">&lt;body&gt; </span><br><span class="line">    &lt;div id=&quot;demo&quot;&gt; </span><br><span class="line">        &lt;h1&gt;v-for和v-if谁的优先级高？应该如何正确使用避免性能问题？&lt;/h1&gt; </span><br><span class="line">        &lt;!-- &lt;p v-for=&quot;child in children&quot; v-if=&quot;isFolder&quot;&gt;&#123;&#123;child.title&#125;&#125;&lt;/p&gt; --&gt; </span><br><span class="line">        &lt;template v-if=&quot;isFolder&quot;&gt; </span><br><span class="line">            &lt;p v-for=&quot;child in children&quot;&gt;&#123;&#123;child.title&#125;&#125;&lt;/p&gt; </span><br><span class="line">        &lt;/template&gt; </span><br><span class="line">    &lt;/div&gt; </span><br><span class="line">    &lt;script src=&quot;../../dist/vue.js&quot;&gt;&lt;/script&gt; </span><br><span class="line">    &lt;script&gt; </span><br><span class="line">        // 创建实例 </span><br><span class="line">        const app = new Vue(&#123; </span><br><span class="line">            el: &#x27;#demo&#x27;, </span><br><span class="line">            data() &#123; </span><br><span class="line">                return &#123; </span><br><span class="line">                    children: [ </span><br><span class="line">                        &#123;title:&#x27;foo&#x27;&#125;, </span><br><span class="line">                        &#123;title:&#x27;bar&#x27;&#125;, </span><br><span class="line">                    ] </span><br><span class="line">                &#125; </span><br><span class="line">            &#125;, </span><br><span class="line">            computed: &#123; </span><br><span class="line">                isFolder() &#123; </span><br><span class="line">                    return this.children &amp;&amp; this.children.length &gt; 0                  </span><br><span class="line">                &#125; </span><br><span class="line">            &#125;, </span><br><span class="line">        &#125;); </span><br><span class="line">        console.log(app.$options.render); </span><br><span class="line">    &lt;/script&gt; </span><br><span class="line">&lt;/body&gt; </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>两者同级时，渲染函数如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(function anonymous(</span><br><span class="line">) &#123;</span><br><span class="line">    with (this) &#123;</span><br><span class="line">        return _c(&#x27;div&#x27;, &#123; attrs: &#123; &quot;id&quot;: &quot;demo&quot; &#125; &#125;, [_c(&#x27;h1&#x27;, [_v(&quot;v-for和v-if谁的优先 级高？应该如何正确使用避免性能问题？&quot;)]), _v(&quot; &quot;),</span><br><span class="line">        _l((children), function (child) &#123;</span><br><span class="line">            return (isFolder) ? _c(&#x27;p&#x27;,</span><br><span class="line">                [_v(_s(child.title))]) : _e()</span><br><span class="line">        &#125;)], 2)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>两者不同级时，渲染函数如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(function anonymous(</span><br><span class="line">) &#123;</span><br><span class="line">    with (this) &#123;</span><br><span class="line">        return _c(&#x27;div&#x27;, &#123; attrs: &#123; &quot;id&quot;: &quot;demo&quot; &#125; &#125;, [_c(&#x27;h1&#x27;, [_v(&quot;v-for和v-if谁的优先 级高？应该如何正确使用避免性能问题？&quot;)]), _v(&quot; &quot;),</span><br><span class="line">        (isFolder) ? _l((children), function (child) &#123;</span><br><span class="line">            return _c(&#x27;p&#x27;,</span><br><span class="line">                [_v(_s(child.title))])</span><br><span class="line">        &#125;) : _e()], 2)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="v-for-的-key-值"><a href="#v-for-的-key-值" class="headerlink" title="v-for 的 key 值"></a>v-for 的 key 值</h3><ul>
+<li><a href="https://tding.top/archives/28aaa65b.html">Vue 的 v-for 为什么要加 key</a></li>
+</ul>
+<p><strong>注意：不建议使用 index 作为 key 值</strong>。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">         下标</span><br><span class="line">1. 前天   0</span><br><span class="line">2. 昨天   1</span><br><span class="line">3. 今天   2</span><br><span class="line">4. 明天   3</span><br></pre></td></tr></table></figure>
+
+<p>假设我们删除了 List 中下标为 1 的数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">         下标</span><br><span class="line">1. 前天   0</span><br><span class="line">2. 今天   1</span><br><span class="line">3. 明天   2</span><br></pre></td></tr></table></figure>
+
+<p>我们可以发现，除了第一个数据以外，其余数据的下标均发生了变化。以前的数据和重新渲染后的数据随着 key 值的变化从而没法建立关联关系，这就失去了 key 值存在的意义。</p>
+<h3 id="长列表性能优化"><a href="#长列表性能优化" class="headerlink" title="长列表性能优化"></a>长列表性能优化</h3><p>当你把一个普通的 JavaScript 对象传给 Vue 实例的 data 选项，Vue 将遍历此对象所有的属性，并使用 <code>Object.defineProperty</code> 把这些属性全部转为 <code>getter/setter</code>，这些 <code>getter/setter</code> 对用户来说是不可见的，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。</p>
+<p>然而有些时候我们的组件就是<strong>纯粹的数据展示，不会有任何改变</strong>，我们就不需要 Vue 来劫持我们的数据，在大量数据展示的情况下，这能够很明显的减少组件初始化的时间，那如何禁止 Vue 劫持我们的数据呢？可以通过 <code>Object.freeze</code> 方法来冻结一个对象，一旦被冻结的对象就再也不能被修改了。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export default &#123;</span><br><span class="line">  data: () =&gt; (&#123;</span><br><span class="line">    users: &#123;&#125;</span><br><span class="line">  &#125;),</span><br><span class="line">  async created() &#123;</span><br><span class="line">    const users = await axios.get(&quot;/api/users&quot;);</span><br><span class="line">    this.users = Object.freeze(users);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>Object.freeze()</code> 可以冻结一个对象。<strong>一个被冻结的对象再也不能被修改；不能向这个对象添加新的属性，不能删除已有属性，不能修改该对象已有属性的可枚举性、可配置性、可写性，以及不能修改已有属性的值</strong>。此外，冻结一个对象后该对象的原型也不能被修改。</p>
+</blockquote>
+<h2 id="Webpack-打包相关优化"><a href="#Webpack-打包相关优化" class="headerlink" title="Webpack 打包相关优化"></a>Webpack 打包相关优化</h2><p>我们可以对 webpack 打包过程进行优化，从而去减小资源大小，主要方法：</p>
+<ul>
+<li>压缩资源：<ul>
+<li>compression-webpack-plugin 进行 gzip 压缩</li>
+<li>terser-webpack-plugin 打包时去除 <code>console.log</code> 以及 <code>debugger</code></li>
+</ul>
+</li>
+<li>按需打包：<ul>
+<li>lodash 按需引入</li>
+<li>moment 按需打包</li>
+</ul>
+</li>
+<li>按需加载：<ul>
+<li>组件路由懒加载</li>
+</ul>
+</li>
+<li>代码分割：分割各个模块代码，提取相同部分代码，从而减少重复代码<ul>
+<li>splitChunks 进行代码分割</li>
+</ul>
+</li>
+</ul>
+<p>在进行优化之前，首先通过 webpack-bundle-analyzer 插件去直观的看一下项目中各个模块的大小。</p>
+<h3 id="webpack-bundle-analyzer-打包文件分析"><a href="#webpack-bundle-analyzer-打包文件分析" class="headerlink" title="webpack-bundle-analyzer 打包文件分析"></a>webpack-bundle-analyzer 打包文件分析</h3><p>通过使用 <code>webpack-bundle-analyzer</code> 可以让我们非常直观的看到项目中各模块的大小，方便后续进行优化。</p>
+<p>依赖安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install webpack-bundle-analyzer –save-dev</span><br></pre></td></tr></table></figure>
+
+<p>然后在 <code>vue.config.js</code> 中添加配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const BundleAnalyzerPlugin = require(&#x27;webpack-bundle-analyzer&#x27;).BundleAnalyzerPlugin</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  configureWebpack: (config) =&gt; &#123;</span><br><span class="line">    config.plugins.push(</span><br><span class="line">      new BundleAnalyzerPlugin()</span><br><span class="line">    );</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里使用默认配置（<code>new BundleAnalyzerPlugin()</code>）。</p>
+<p>然后每次运行时，系统默认浏览器打开 <code>http://127.0.0.1:8888/</code>，展示项目的分析结果。</p>
+<p>可选的配置选项：</p>
+<ul>
+<li><code>analyzerMode:&#39;server&#39;</code>，可以是 server，static 或 disabled。在 server 模式下，分析器将启动 HTTP 服务器来显示软件包报告。在 “静态” 模式下，会生成带有报告的单个 HTML 文件。在 disabled 模式下，你可以使用这个插件来将 generateStatsFile 设置为 true 来生成 Webpack Stats JSON 文件。</li>
+<li><code>analyzerHost: &#39;127.0.0.1&#39;</code>, 将在 “服务器” 模式下使用的端口启动 HTTP 服务器。</li>
+<li><code>analyzerPort: 8888</code>, 端口号。</li>
+<li><code>reportFilename: &#39;report.html&#39;</code>, 路径捆绑，将在 static 模式下生成的报告文件。相对于捆绑输出目录。</li>
+<li><code>defaultSizes: &#39;parsed&#39;</code>，默认显示在报告中的模块大小匹配方式。应该是 stat，parsed 或者 gzip 中的一个。</li>
+<li><code>openAnalyzer: true</code>：在默认浏览器中自动打开报告。</li>
+<li><code>generateStatsFile:false</code>: 如果为 true，则 Webpack Stats JSON 文件将在 bundle 输出目录中生成。</li>
+<li><code>statsFilename: &#39;stats.json&#39;</code>, 相对于捆绑输出目录。</li>
+<li><code>statsOptions: null</code>，<code>stats.toJson()</code> 方法的选项。例如，您可以使用 <code>source:false</code> 选项排除统计文件中模块的来源。在这里查看更多选项：<a href="https://github.com/webpack/webpack/blob/webpack-1/lib/Stats.js#L21">https://github.com/webpack/webpack/blob/webpack-1/lib/Stats.js#L21</a></li>
+<li><code>logLevel: &#39;info&#39;</code>，日志级别，可以是 info, warn, error, silent。</li>
+<li><code>excludeAssets:null</code>，用于排除分析一些文件。</li>
+</ul>
+<p>默认配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">new BundleAnalyzerPlugin(&#123;</span><br><span class="line">  analyzerMode: &#x27;server&#x27;,</span><br><span class="line">  analyzerHost: &#x27;127.0.0.1&#x27;,</span><br><span class="line">  analyzerPort: 8888, </span><br><span class="line">  reportFilename: &#x27;report.html&#x27;,</span><br><span class="line">  defaultSizes: &#x27;parsed&#x27;,</span><br><span class="line">  openAnalyzer: true,</span><br><span class="line">  generateStatsFile: false, </span><br><span class="line">  statsFilename: &#x27;stats.json&#x27;,</span><br><span class="line">  statsOptions: null,</span><br><span class="line">  logLevel: &#x27;info&#x27;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="depcheck-依赖分析"><a href="#depcheck-依赖分析" class="headerlink" title="depcheck 依赖分析"></a>depcheck 依赖分析</h3><p>随着项目工程逐步变大，引入的依赖也越来越多，其中有不少其实已经不再用到了，完全可以删除来减小依赖，这里可以用 depcheck 工具去检测是否不再使用。</p>
+<p>依赖安装，全局安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g depcheck</span><br></pre></td></tr></table></figure>
+
+<p>然后在项目工程的目录下执行命令 depcheck，下面是检测结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Unused dependencies</span><br><span class="line">* amfe-flexible</span><br><span class="line">* core-js</span><br><span class="line">* file-saver</span><br><span class="line">* less-loader</span><br><span class="line">* postcss</span><br><span class="line">* vue-axios</span><br><span class="line">* vue-datepicker</span><br><span class="line">* vue-notification</span><br><span class="line">* vuejs-datepicker</span><br><span class="line">Unused devDependencies</span><br><span class="line">* @vue/cli-plugin-babel</span><br><span class="line">* @vue/cli-plugin-eslint</span><br><span class="line">* @vue/cli-plugin-unit-mocha</span><br><span class="line">* @vue/test-utils</span><br><span class="line">* babel-eslint</span><br><span class="line">* chai</span><br><span class="line">* postcss-pxtorem</span><br><span class="line">* sass</span><br><span class="line">* sass-loader</span><br><span class="line">Missing dependencies</span><br><span class="line">* moment: .\vue.config.js</span><br><span class="line">* terser-webpack-plugin: .\vue.config.js</span><br><span class="line">* video.js: .\src\main.js</span><br><span class="line">* q: .\src\router\index.js</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li>Unused dependencies：表示没有使用的依赖包</li>
+<li>Unused devDependencies：表示没有使用的开发环境依赖包</li>
+<li>Missing dependencies：表示使用到了但是没有在 <code>package.json</code> 文件中声明的依赖包</li>
+</ul>
+<p>然后我们就可以根据检测结果进行无用依赖的删除。</p>
+<h4 id="注意事项-存在误判"><a href="#注意事项-存在误判" class="headerlink" title="注意事项 - 存在误判"></a>注意事项 - 存在误判</h4><p><strong>这里 depcheck 依赖分析仅仅作为一个参考，存在部分误判的情况。</strong></p>
+<ol>
+<li>其实 <code>sass</code>、<code>sass-loader</code> 是有用到的，在 <code>&lt;style lang=&#39;sass&#39;&gt;</code> 这里。</li>
+<li>其中 <code>less-loader</code> 是用到的，不过这个仅仅在开发环境需要，因此：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm uninstall less-loader --save</span><br></pre></td></tr></table></figure>
+
+<p>然后：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install less-loader --save-dev</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>运行后报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> error  in ./src/views/xxxxxx.vue?vue&amp;type=style&amp;index=0&amp;lang=less&amp;</span><br><span class="line"></span><br><span class="line">Module build failed (from ./node_modules/less-loader/dist/cjs.js):</span><br><span class="line">TypeError: this.getOptions is not a function</span><br><span class="line">    at Object.lessLoader (xxxxxx\node_modules\less-loader\dist\index.js:19:24)</span><br></pre></td></tr></table></figure>
+
+<p>这是因为这个 <code>less-loader</code> 版本太高，移除后指定版本 <code>6.1.3</code> 安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm uninstall less-loader --save-dev</span><br><span class="line">npm install less-loader@6.1.3 --save-dev</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="compression-webpack-plugin-进行-gzip-压缩"><a href="#compression-webpack-plugin-进行-gzip-压缩" class="headerlink" title="compression-webpack-plugin 进行 gzip 压缩"></a>compression-webpack-plugin 进行 gzip 压缩</h3><p>虽然 Nginx 可以将资源自动 gzip 压缩（开启 gzip 功能）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gzip on;              # 开启gzip</span><br><span class="line">gzip_min_length 2k;   # 超过2kb进行压缩</span><br><span class="line">gzip_disable msie6;   # ie6不适用gzip</span><br><span class="line">gzip_types text/css application/javascript text/javascript image/jpeg image/png image/gif;  # 需要处理的文件</span><br></pre></td></tr></table></figure>
+
+<p><strong>不过这样会使得每次请求时都要压缩一次，比较浪费资源</strong>。</p>
+<p>因此，我们可以通过 <code>compression-webpack-plugin</code> 插件，在打包时提前将资源 gzip 压缩好，保存在服务端。</p>
+<p>依赖安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install compression-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>注：不要安装最新版本，否则容易 build 失败，报错类似在 <code>xx.js</code> 中 <code>** undefined</code> 或者 <code>TypeEror</code> 之类的，一般都是版本问题。</p>
+<p>然后在 <code>vue.config.js</code> 中添加配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const CompressionPlugin = require(&#x27;compression-webpack-plugin&#x27;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  configureWebpack: (config) =&gt; &#123;</span><br><span class="line">    config.plugins.push(</span><br><span class="line">      new CompressionPlugin(&#123;</span><br><span class="line">        test: /\.(js|css|html)?$/,</span><br><span class="line">        filename: &#x27;[path][base].gz&#x27;,</span><br><span class="line">        algorithm: &#x27;gzip&#x27;,</span><br><span class="line">        minRatio: 0.8,</span><br><span class="line">        deleteOriginalAssets: false</span><br><span class="line">      &#125;)</span><br><span class="line">    );</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>minRatio：只有压缩率小于这个值的资源才会被处理</li>
+</ul>
+<p><code>npm run build</code> 后，可以在 <code>dist/js</code> 目录下可以看 gzip 压缩前后的文件大小：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Mode           Length Name</span><br><span class="line">----           ------ ----</span><br><span class="line">-a----          53586 chunk-041bbe7c.1f705809.js</span><br><span class="line">-a----          12789 chunk-041bbe7c.1f705809.js.gz</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>**最后，别忘记在 Nginx 配置文件中开启 <code>gzip_static</code>**：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gzip_static  on;</span><br></pre></td></tr></table></figure>
+
+<p>注：这种模式下，gzip 压缩文件都是提前准备好的，如果没有<code>.gz</code> 格式的文件就会自动返回原文件。</p>
+<h3 id="terser-webpack-plugin-打包时去除-console-log-以及-debugger-等"><a href="#terser-webpack-plugin-打包时去除-console-log-以及-debugger-等" class="headerlink" title="terser-webpack-plugin 打包时去除 console.log 以及 debugger 等"></a><code>terser-webpack-plugin</code> 打包时去除 <code>console.log</code> 以及 <code>debugger</code> 等</h3><p>由于 <code>uglifyjs-webpack-plugin</code> 不识别 ES6 的语法，vue-cli3.0 在打包过程中就使用了 <code>terser-webpack-plugin</code> 插件进行优化。</p>
+<p><strong>由于 vue-cli 工具中已经用到了 <code>terser-webpack-plugin</code>，因此在 vue-cli 新建的项目中可以直接引入 <code>terser-webpack-plugin</code>，无需安装。</strong></p>
+<p>在 <code>vue.config.js</code> 中添加配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const TerserPlugin = require(&quot;terser-webpack-plugin&quot;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  configureWebpack: (config) =&gt; &#123;</span><br><span class="line">    config.plugins.push(</span><br><span class="line">      new TerserPlugin(&#123;</span><br><span class="line">        terserOptions: &#123;</span><br><span class="line">          ecma: undefined,</span><br><span class="line">          warnings: false,</span><br><span class="line">          parse: &#123;&#125;,</span><br><span class="line">          compress: &#123;</span><br><span class="line">            drop_console: true,</span><br><span class="line">            drop_debugger: true,</span><br><span class="line">            pure_funcs: [&#x27;console.log&#x27;], // 移除console</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;),</span><br><span class="line">    );</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里去掉了 <code>console.log</code> 以及 <code>debugger</code>。</p>
+<h3 id="lodash-按需引入"><a href="#lodash-按需引入" class="headerlink" title="lodash 按需引入"></a>lodash 按需引入</h3><p>完整引入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import _ from &#x27;lodash&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>手动按需引入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import debounce from &quot;lodash/debounce&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>或者使用插件 <code>babel-plugin-lodash</code>，然后在 <code>babel.config.js</code> 添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  plugins: [&quot;lodash&quot;],</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>然后发现，只引入了 lodash 的几个方法，从数量上看还不到总量的零头，但是好像 lodash 的一大半都被打包进去了。比如，map 一共用到 121 个模块。</p>
+<p>但是大多数人在使用时，并不会用到这些特殊的用法，却不得不为大量的冗余代码买单。因此，lodash 就提供了 <code>lodash-webpack-plugin</code> 这个插件，可以使得打包的代码量减少 99%。</p>
+<p>插件用法，在 <code>vue.config.js</code> 中添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const LodashModuleReplacementPlugin = require(&quot;lodash-webpack-plugin&quot;);</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  chainWebpack: (config) =&gt; &#123;</span><br><span class="line">    config.plugin(&quot;loadshReplace&quot;).use(new LodashModuleReplacementPlugin());</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="lodash-webpack-plugin-问题"><a href="#lodash-webpack-plugin-问题" class="headerlink" title="lodash-webpack-plugin 问题"></a>lodash-webpack-plugin 问题</h4><p>不过，引入 <code>lodash-webpack-plugin</code> 后，例如，map 方法的其他各种奇奇怪怪的用法就失效了，只剩下最基本的类似 Array map 的用法。</p>
+<p>一个例子：clamp 模块依赖 toNumber 进行参数处理（即支持传入字符串参数，并在内部先处理成数字）。<strong>但是使用 Plugin 后，Plugin 会把 toNumber 替换成 identity（即 <code>a =&gt; a</code>），导致 clamp 不再支持字符串参数</strong>。如果传入的是字符串，返回的结果将发生变化。</p>
+<p>而且，**<code>lodash-webpack-plugin</code> 会影响第三方模块的行为**。如果第三方模块中也使用了 lodash 模块，而且用到了某些非常规用法，一旦使用了 Plugin 后，这个第三方模块使用的 lodash 的执行逻辑就可能发生变化。产生的后果可能是立即报错，也可能产生更严重的后果，即返回了和预期不一致的值，这个错误值在一系列流转之后，在另一个地方产生了 BUG。一旦出现了这种情况，因为这是一个第三方模块，问题的排查可能会非常困难。</p>
+<p>结论：不建议使用 <code>lodash-webpack-plugin</code>。</p>
+<h3 id="Moment-按需打包"><a href="#Moment-按需打包" class="headerlink" title="Moment 按需打包"></a>Moment 按需打包</h3><p><strong><code>moment.js</code> 占用空间大的原因在于，moment 中包含了大量语言资源文件，但其实我们并不需要这些。</strong></p>
+<p>通过 webpack 自身的功能即可在打包时去掉这些用不到的语言包，在 <code>vue.config.js</code> 中添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const webpack = require(&#x27;webpack&#x27;);</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  configureWebpack: config =&gt; &#123;</span><br><span class="line">    const plugins = [</span><br><span class="line">      // 只保留中文语言资源</span><br><span class="line">      new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn/),</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="组件路由懒加载"><a href="#组件路由懒加载" class="headerlink" title="组件路由懒加载"></a>组件路由懒加载</h3><p><strong>我们可以将不同路由对应的组件分割成不同的代码块，这样，当路由被访问的时候才加载对应组件</strong>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const Foo = () =&gt; import(&#x27;./Foo.vue&#x27;)</span><br><span class="line"></span><br><span class="line">const router = new VueRouter(&#123;</span><br><span class="line">  routes: [&#123; path: &#x27;/foo&#x27;, component: Foo &#125;]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="splitChunks-进行代码分割"><a href="#splitChunks-进行代码分割" class="headerlink" title="splitChunks 进行代码分割"></a>splitChunks 进行代码分割</h3><h4 id="常见代码分割方式"><a href="#常见代码分割方式" class="headerlink" title="常见代码分割方式"></a>常见代码分割方式</h4><p>Webpack 中有以下三种常见的代码分割方式:</p>
+<ul>
+<li>入口起点：使用 entry 配置手动地分离代码</li>
+<li>动态导入：通过模块的内联函数调用来分离代码</li>
+<li>防止重复：使用 splitChunks 去重和分离 chunk</li>
+</ul>
+<p>第一种方式，很简单，只需要在 entry 里配置多个入口即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">entry: &#123; app: &quot;./index.js&quot;, app1: &quot;./index1.js&quot; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二种方式，就是在代码中自动将使用 <code>import()</code> 加载的模块分离成独立的包：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//...</span><br><span class="line">import(&quot;./a&quot;);</span><br><span class="line">//...</span><br></pre></td></tr></table></figure>
+
+<p>第三种方式，是使用 splitChunks 插件，配置分离规则，然后 webpack 自动将满足规则的 chunk 分离。一切都是自动完成的。</p>
+<h4 id="splitChunks-默认配置"><a href="#splitChunks-默认配置" class="headerlink" title="splitChunks 默认配置"></a>splitChunks 默认配置</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">splitChunks: &#123;</span><br><span class="line">  // 表示选择哪些 chunks 进行分割，可选值有：async，initial和all</span><br><span class="line">  chunks: &quot;async&quot;,</span><br><span class="line">  // 表示新分离出的chunk必须大于等于minSize，默认为30000，约30kb。</span><br><span class="line">  minSize: 30000,</span><br><span class="line">  // 表示一个模块至少应被minChunks个chunk所包含才能分割。默认为1。</span><br><span class="line">  minChunks: 1,</span><br><span class="line">  // 表示按需加载文件时，并行请求的最大数目。默认为5。</span><br><span class="line">  maxAsyncRequests: 5,</span><br><span class="line">  // 表示加载入口文件时，并行请求的最大数目。默认为3。</span><br><span class="line">  maxInitialRequests: 3,</span><br><span class="line">  // 表示拆分出的chunk的名称连接符。默认为~。如chunk~vendors.js</span><br><span class="line">  automaticNameDelimiter: &#x27;~&#x27;,</span><br><span class="line">  // 设置chunk的文件名。默认为true。当为true时，splitChunks基于chunk和cacheGroups的key自动命名。</span><br><span class="line">  name: true,</span><br><span class="line">  // cacheGroups 下可以可以配置多个组，每个组根据test设置条件，符合test条件的模块，就分配到该组。模块可以被多个组引用，但最终会根据priority来决定打包到哪个组中。默认将所有来自node_modules目录的模块打包至vendors组，将两个以上的chunk所共享的模块打包至default组。</span><br><span class="line">  cacheGroups: &#123;</span><br><span class="line">    vendors: &#123;</span><br><span class="line">      test: /[\\/]node_modules[\\/]/,</span><br><span class="line">      priority: -10</span><br><span class="line">    &#125;,</span><br><span class="line">    // </span><br><span class="line">    default: &#123;</span><br><span class="line">      minChunks: 2,</span><br><span class="line">      priority: -20,</span><br><span class="line">      reuseExistingChunk: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="chunks"><a href="#chunks" class="headerlink" title="chunks"></a>chunks</h4><p>chunks 用以告诉 splitChunks 的作用对象，其可选值有 async、initial 和 all。默认值是 async，也就是默认只选取异步加载的 chunk 进行代码拆分。</p>
+<p>示例：</p>
+<p>当 <code>chunks: async</code>：</p>
+<p><code>index.js</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import(&quot;./a&quot;);</span><br><span class="line"></span><br><span class="line">// ...</span><br></pre></td></tr></table></figure>
+
+<p><code>a.js</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &quot;vue&quot;;</span><br><span class="line"></span><br><span class="line">// ...</span><br></pre></td></tr></table></figure>
+
+<p>最后打包出来：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.js    712 bytes</span><br><span class="line">2.js    234 kb</span><br><span class="line">app.js  8.46 kb</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>index.js</code> 作为入口文件，属于入口起点手动配置分割代码的情况，因此会独立打包。(<code>app.js</code>)</li>
+<li><code>a.js</code> 通过 <code>import()</code> 进行加载，属于动态导入的情况，因此会独立打出一个包。(<code>1.js</code>)</li>
+<li>vue 来自 <code>node_modules</code> 目录，并且大于 30kb；将其从 <code>a.js</code> 拆出后，与 <code>a.js</code> 并行加载，并行加载的请求数为 2，未超过默认的 5；vue 拆分后，并行加载的入口文件并无增加，未超过默认的 3。vue 也符合 splitChunks 的拆分条件，单独打了一个包。(<code>2.js</code>)</li>
+</ul>
+<p><strong>当 <code>chunks: initial</code>：splitChunks 的作用范围变成了非异步加载的初始 chunk</strong>，例如我们的 <code>index.js</code> 就是初始化的时候就存在的 chunk。而 vue 模块是在异步加载的 chunk <code>a.js</code> 中引入的，所以并不会被分离出来。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.js    234 kb</span><br><span class="line">app.js  8.46 kb</span><br></pre></td></tr></table></figure>
+
+<p>如果这样修改下：</p>
+<p><code>index.js</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#x27;vue&#x27;</span><br><span class="line">import(&#x27;./a&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p><code>a.js</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">console.log(&#x27;a&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>最后打包出来：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.js    638 bytes</span><br><span class="line">app.js    9.52 kb</span><br><span class="line">index.html  294 bytes</span><br><span class="line">vendors~app.js  234 kb</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，vue 在 <code>index.js</code> 直接被引入，而 <code>index.js</code> 是初始 chunk，所以分离出来打到了 <code>vendors~app.js</code> 中。</p>
+<p><strong>当 <code>chunks: all</code>：</strong></p>
+<p><code>index.js</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#x27;vue-router&#x27;</span><br><span class="line">import(&quot;./a&quot;);</span><br></pre></td></tr></table></figure>
+
+<p><code>a.js</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &quot;vue&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>最后打包出来：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.js    706 bytes</span><br><span class="line">3.js    234 kb</span><br><span class="line">app.js  9.55 kb</span><br><span class="line">index.html  294 bytes</span><br><span class="line">vendors~app.js  72.6 kb</span><br></pre></td></tr></table></figure>
+
+<p><strong>splitChunks 的作用范围包括了初始 chunk 和异步 chunk 两种场景。</strong>因此 <code>index.js</code> 中的 vue-router 被分拆到了 <code>vendors~app.js</code> 中，而异步加载的 chunk <code>a.js</code> 中的 vue 被分拆到了 <code>3.js</code> 中。</p>
+<h4 id="cache-groups"><a href="#cache-groups" class="headerlink" title="cache groups"></a>cache groups</h4><p><strong>cacheGroups 继承 splitChunks 里的所有属性的值</strong>，如 chunks、minSize、minChunks、maxAsyncRequests、maxInitialRequests、automaticNameDelimiter、name，我们还可以在 cacheGroups 中重新赋值，覆盖 splitChunks 的值。另外，还有一些属性只能在 cacheGroups 中使用：test、priority、reuseExistingChunk。</p>
+<p>cacheGroups 有两个默认的组，一个是 vendors，所有来自 <code>node_modules</code> 目录的模块；一个 default，包含了由两个以上的 chunk 所共享的模块。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chunks:&#x27;all&#x27;,</span><br><span class="line">cacheGroups: &#123;</span><br><span class="line">  vendors: &#123;</span><br><span class="line">    test: /[\\/]node_modules[\\/]/,</span><br><span class="line">    name: &quot;customName&quot;,</span><br><span class="line">    priority: -10</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="采用的配置"><a href="#采用的配置" class="headerlink" title="采用的配置"></a>采用的配置</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  chainWebpack: (config) =&gt; &#123;</span><br><span class="line">    config.optimization.splitChunks(&#123;</span><br><span class="line">      chunks: &#x27;all&#x27;,</span><br><span class="line">      cacheGroups: &#123;</span><br><span class="line">        //公用模块抽离</span><br><span class="line">        common: &#123;</span><br><span class="line">          name: &#x27;chunk-common&#x27;,</span><br><span class="line">          chunks: &#x27;initial&#x27;,</span><br><span class="line">          minChunks: 2, //抽离公共代码时，这个代码块最小被引用的次数</span><br><span class="line">        &#125;,</span><br><span class="line">        //第三方库抽离</span><br><span class="line">        vendors: &#123;</span><br><span class="line">          name: &#x27;chunk-vendors&#x27;,</span><br><span class="line">          priority: 1, //权重</span><br><span class="line">          test: /node_modules/,</span><br><span class="line">          chunks: &#x27;initial&#x27;,</span><br><span class="line">          minChunks: 2, //在分割之前，这个代码块最小应该被引用的次数</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="MiniCssExtractPlugin-插件将-CSS-提取到单独的文件"><a href="#MiniCssExtractPlugin-插件将-CSS-提取到单独的文件" class="headerlink" title="MiniCssExtractPlugin 插件将 CSS 提取到单独的文件"></a>MiniCssExtractPlugin 插件将 CSS 提取到单独的文件</h3><p>此插件为每个包含 CSS 的 JS 文件创建一个单独的 CSS 文件，并支持 CSS 和 SourceMap 的按需加载。</p>
+<p><strong>注意：这里说的每个包含 CSS 的 JS 文件，并不是说组件对应的 JS 文件，而是打包之后的 JS 文件</strong>。</p>
+<p>优点：</p>
+<ul>
+<li><strong>CSS 请求并行</strong>，如果样式文件大小较大，这会做更快提前加载</li>
+<li>CSS 单独缓存</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>需要额外的 HTTP 请求</li>
+</ul>
+<p>依赖安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save-dev mini-css-extract-plugin</span><br></pre></td></tr></table></figure>
+
+<p><code>vue.config.js</code> 添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const MiniCssExtractPlugin = require(&#x27;mini-css-extract-plugin&#x27;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  chainWebpack: (config) =&gt; &#123;</span><br><span class="line">    let miniCssExtractPlugin = new MiniCssExtractPlugin(&#123;</span><br><span class="line">      filename: &#x27;assets/[name].[hash:8].css&#x27;,</span><br><span class="line">      chunkFilename: &#x27;assets/[name].[hash:8].css&#x27;</span><br><span class="line">    &#125;)</span><br><span class="line">    config.plugin(&#x27;extract-css&#x27;).use(miniCssExtractPlugin);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>filename：控制从打包后的<strong>入口 JS 文件</strong>中提取 CSS 样式生成的 CSS 文件的名称。</li>
+<li>chunkFilename：控制从打包后的<strong>非入口 JS 文件</strong>中提取 CSS 样式生成的 CSS 文件的名称。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.cnblogs.com/goloving/p/13993388.html">浅析 vue 项目性能优化应该注意的点</a></li>
+<li><a href="https://juejin.cn/post/6966071095422091301">vue 须知（1）—— v-if 和 v-for 哪个优先级更高？如果两个同时出现，应该怎么优化得到更好的性能？</a></li>
+<li><a href="https://blog.csdn.net/z591102/article/details/106682298">为什么不建议使用 index 作为 key 值</a></li>
+<li><a href="https://www.cnblogs.com/goloving/p/13969685.html">vue 利用 object.freeze 提升列表渲染性能</a></li>
+<li><a href="https://newsn.net/say/webpack-bundle-analyzer.html">webpack4 系列教程，性能分析利器 webpack-bundle-analyzer</a></li>
+<li><a href="https://blog.csdn.net/weixin_44197671/article/details/115404615">vue-cli3 gzip 和 uglifyjs 使用</a></li>
+<li><a href="https://blog.csdn.net/hututututututu/article/details/109715223">terser-webpack-plugin 替代 uglifyjs-webpack-plugin</a></li>
+<li><a href="https://blog.csdn.net/weixin_44979432/article/details/118295943">vue 项目中 webpack 使用（terser-webpack-plugin）打包时候去掉 console.log 与 debugger 调试</a></li>
+<li><a href="https://www.cnblogs.com/qq735675958/p/14609903.html">lodash 按需引入</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/349260482">为什么你应该立即停止使用 lodash-webpack-plugin</a></li>
+<li><a href="https://juejin.cn/post/6844904103848443912">如何使用 splitChunks 精细控制代码分割</a></li>
+<li><a href="https://juejin.cn/post/6850418117500715015">『Webpack 系列』—— MiniCssExtractPlugin 插件用法详解</a></li>
+<li><a href="https://juejin.cn/post/6844903853410746382">demo14 webpack mini-css-extract-plugin + SplitChunksPlugin 处理 css 和 scss</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端，性能优化</category>
+      </categories>
+      <tags>
+        <tag>前端，性能优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue吸顶效果实现</title>
+    <url>/liuqi_blogs/2022/02/06/%E5%90%B8%E9%A1%B6%E6%95%88%E6%9E%9C%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p>Vue 实现吸顶效果。</p>
+<h2 id="总体思路"><a href="#总体思路" class="headerlink" title="总体思路"></a>总体思路</h2><p>因为在 CSS 中我们可以设置一个元素的 <code>position: fixed;</code>，这样它就可以固定在那里，这样不管页面怎么滚动，它的位置都不受影响，所以我们的思路就是在合适的时机把要吸顶的头部元素的 position 属性设置为 fixed 就可以了。但是这个合适的时机是什么时候呢，这就需要我们计算了，我们需要监听页面的滚动状态，当页面滚动到要吸顶元素所处的位置的时候就是我们设置它固定的时候。</p>
+<span id="more"></span>
+
+<h2 id="吸顶效果具体实现"><a href="#吸顶效果具体实现" class="headerlink" title="吸顶效果具体实现"></a>吸顶效果具体实现</h2><p>在需要实现吸顶效果的 div 上，增加一个 class，例如<code>:class=&quot;&#123;&#39;is_fixed&#39;: isFixed&#125;&quot;</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div :class=&quot;&#123;&#x27;is_fixed&#x27;: isFixed&#125;&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;title&quot;&gt;标题&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;content&quot;&gt;</span><br><span class="line">    &lt;div&gt;内容&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在需要触发吸顶效果的位置增加（<strong>当滚动条下滑超过这个位置，将出现吸顶效果</strong>）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div id=&quot;boxFixed&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>增加滚动条监听，计算<code>#boxFixed</code> 到顶端的距离：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mounted() &#123;</span><br><span class="line">  window.addEventListener(&#x27;scroll&#x27;, this.initHeight);</span><br><span class="line">  this.$nextTick(() =&gt; &#123;</span><br><span class="line">    //获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置 </span><br><span class="line">    this.offsetTop = document.querySelector(&#x27;#boxFixed&#x27;).offsetTop;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">methods: &#123;</span><br><span class="line">  initHeight() &#123;</span><br><span class="line">    // 设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离 (被卷曲的高度)</span><br><span class="line">    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop</span><br><span class="line">    // 如果被卷曲的高度大于吸顶元素到顶端位置的距离</span><br><span class="line">    this.isFixed = scrollTop &gt; this.offsetTop ? true : false;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">// 销毁时移除监听</span><br><span class="line">destroyed() &#123;</span><br><span class="line">  window.removeEventListener(&#x27;scroll&#x27;, this.handleScroll)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>吸顶效果实现 CSS：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.is_fixed&#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  position: fixed;</span><br><span class="line">  top: 0;</span><br><span class="line">  z-index: 999;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="页面上下跳动问题解决"><a href="#页面上下跳动问题解决" class="headerlink" title="页面上下跳动问题解决"></a>页面上下跳动问题解决</h2><p>当 scrollTop 大于吸顶元素 top 的距离，吸顶元素会被设置为固定属性，<strong>一个元素一旦被设置为 <code>position: fixed;</code>，那么它就会相对于浏览器窗口进行定位，然后下面的内容就会往上顶</strong>。一部分内容就看不到了。</p>
+<p>一个简单的办法是再加一个和吸顶元素一模一样的元素：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div v-show=&quot;isFixed&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;title&quot;&gt;标题&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;content&quot;&gt;</span><br><span class="line">    &lt;div&gt;内容&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这个元素默认是隐藏的，只有当页面滚动的距离达到了它的位置的时候我们才让它显示，由于它是固定状态，所以它的隐藏显示并不会对页面产生影响，这样下面的内容就不会往上顶了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.jianshu.com/p/3e769dade7b3">30 秒实现 Vue 吸顶效果</a></li>
+<li><a href="https://www.imooc.com/article/256077">Vue 开发 —— 实现吸顶效果</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>vue.js</category>
+      </categories>
+      <tags>
+        <tag>vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>异步</title>
     <url>/liuqi_blogs/2021/08/22/%E5%BC%82%E6%AD%A5/</url>
     <content><![CDATA[<h1 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h1><h2 id="1-promise"><a href="#1-promise" class="headerlink" title="1. promise"></a>1. promise</h2><p>Promise 是es6中出现的新的api :</p>
@@ -1174,6 +1762,42 @@ Markdown 还没有办法指定图片的高度与宽度，如果你需要的话�
       </categories>
       <tags>
         <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微前端qiankun应用间通讯</title>
+    <url>/liuqi_blogs/2022/01/28/%E5%BE%AE%E5%89%8D%E7%AB%AFqiankun%E5%BA%94%E7%94%A8%E9%97%B4%E9%80%9A%E8%AE%AF/</url>
+    <content><![CDATA[<p>qiankun 官方提供的 Actions 通信方式，适合业务划分清晰，比较简单的微前端应用，可以满足大部分的应用场景需求。</p>
+<span id="more"></span>
+
+<h2 id="Actions-通信原理"><a href="#Actions-通信原理" class="headerlink" title="Actions 通信原理"></a>Actions 通信原理</h2><p>qiankun 内部提供了 <code>initGlobalState</code> 方法用于注册 MicroAppStateActions 实例用于通信，该实例有三个方法，分别是：</p>
+<ul>
+<li><code>setGlobalState</code>：设置 globalState - 设置新的值时，内部将执行浅检查，如果检查到 globalState 发生改变则触发通知，通知到所有的观察者函数。</li>
+<li><code>onGlobalStateChange</code>：注册观察者函数 - 响应 globalState 变化，在 globalState 发生改变时触发该观察者函数。</li>
+<li><code>offGlobalStateChange</code>：取消观察者函数 - 该实例不再响应 globalState 变化。</li>
+</ul>
+<h2 id="Vue-简单实例"><a href="#Vue-简单实例" class="headerlink" title="Vue 简单实例"></a>Vue 简单实例</h2><h3 id="主应用修改"><a href="#主应用修改" class="headerlink" title="主应用修改"></a>主应用修改</h3><p><code>main.js</code> 增加：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 通讯</span><br><span class="line">const actions = initGlobalState(&#123;</span><br><span class="line">    mt: &#x27;init&#x27; // 初始化state，里面内容您随意</span><br><span class="line">&#125;)</span><br><span class="line">// 在项目中任何需要监听的地方进行监听，在这里监听是为了方便</span><br><span class="line">actions.onGlobalStateChange((state,prev)=&gt;&#123;</span><br><span class="line">    console.log(&#x27;main state change&#x27;,state);</span><br><span class="line">&#125;)</span><br><span class="line">// 将action对象绑到Vue原型上，为了项目中其他地方使用方便</span><br><span class="line">Vue.prototype.$actions = actions</span><br><span class="line"></span><br><span class="line">// 以上代码放在设置默认app之前即可</span><br><span class="line">setDefaultMountApp(&#x27;one&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p><code>App.js</code> 增加修改 state 的方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;main&quot;&gt;</span><br><span class="line">    这是主应用文字</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;button @click=&quot;changeView(&#x27;/one&#x27;)&quot;&gt;子应用one&lt;/button&gt;</span><br><span class="line">    &amp;nbsp;</span><br><span class="line">    &lt;button @click=&quot;changeView(&#x27;/two&#x27;)&quot;&gt;子应用two&lt;/button&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;!--增加修改state的按钮--&gt;</span><br><span class="line">    &lt;button @click=&quot;changeState(&#x27;1&#x27;)&quot;&gt;修改state = 1&lt;/button&gt;</span><br><span class="line">    &amp;nbsp;</span><br><span class="line">    &lt;button @click=&quot;changeState(&#x27;2&#x27;)&quot;&gt;修改state = 2&lt;/button&gt;</span><br><span class="line">    &lt;hr&gt;</span><br><span class="line">    &lt;div id=&quot;micro-view&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import HelloWorld from &#x27;./components/HelloWorld.vue&#x27;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;App&#x27;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    HelloWorld</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    changeView(who)&#123;</span><br><span class="line">      window.history.pushState(null,who,who)</span><br><span class="line">    &#125;,</span><br><span class="line">    changeState(value)&#123;</span><br><span class="line">      // ------ 修改state</span><br><span class="line">      this.$actions.setGlobalState(&#123;</span><br><span class="line">        mt: value</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">#main &#123;</span><br><span class="line">  font-family: Avenir, Helvetica, Arial, sans-serif;</span><br><span class="line">  -webkit-font-smoothing: antialiased;</span><br><span class="line">  -moz-osx-font-smoothing: grayscale;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #2c3e50;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="子应用修改"><a href="#子应用修改" class="headerlink" title="子应用修改"></a>子应用修改</h3><p><code>main.js</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 生命周期 - 挂载后</span><br><span class="line">export async function mount(props) &#123;</span><br><span class="line">    console.log(&#x27;two mount&#x27;);</span><br><span class="line"></span><br><span class="line">    // 设置主应用下发的方法</span><br><span class="line">    Object.keys(props.fn).forEach(method =&gt;&#123;</span><br><span class="line">        Vue.prototype[`$$&#123;method&#125;`] = props.fn[method]</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    // 设置通讯</span><br><span class="line">    Vue.prototype.$onGlobalStateChange = props.onGlobalStateChange</span><br><span class="line">    Vue.prototype.$setGlobalState = props.setGlobalState</span><br><span class="line"></span><br><span class="line">    // 渲染</span><br><span class="line">    render()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>About.vue</code> 增加通讯监听：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div class=&quot;about&quot;&gt;</span><br><span class="line">        this is two about</span><br><span class="line">        &lt;br&gt;</span><br><span class="line">        &lt;button @click=&quot;testFn&quot;&gt;测试事件&lt;/button&gt;</span><br><span class="line">        &lt;br&gt;</span><br><span class="line">        &#123;&#123;&#x27;this is my name --- &#x27;+name&#125;&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name: &quot;About&quot;,</span><br><span class="line">        data() &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                name: &#x27;init name&#x27;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        mounted()&#123;</span><br><span class="line">            // 增加state监听，当mt数据发生变化的时候，我们修改name，体现在页面上</span><br><span class="line">            this.$onGlobalStateChange((state,prev)=&gt;&#123;</span><br><span class="line">                if(state.mt !== prev.mt)&#123;</span><br><span class="line">                    this.name = state.mt</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">        methods: &#123;</span><br><span class="line">            testFn()&#123;</span><br><span class="line">                this.$show(&#x27;测试事件成功&#x27;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.jianshu.com/p/fe21355be9b5">实践基于 qiankun 的微前端 demo - 应用间的通讯</a></li>
+<li><a href="https://juejin.cn/post/6844904151231496200">基于 qiankun 的微前端最佳实践（图文并茂） - 应用间通信篇</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端，性能优化</category>
+      </categories>
+      <tags>
+        <tag>前端，性能优化</tag>
       </tags>
   </entry>
   <entry>
