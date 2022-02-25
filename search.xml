@@ -1921,129 +1921,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo+next搭建博客</title>
-    <url>/liuqi_blogs/2018/02/20/Hexo-next%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<span id="more"></span>
-
-<h2 id="1、Hexo-建站"><a href="#1、Hexo-建站" class="headerlink" title="1、Hexo 建站"></a>1、Hexo 建站</h2><p>首先我们可以在 GitHub Pages 上搭建个人博客。</p>
-<p>具体过程见下文：</p>
-<ul>
-<li><a href="https://tding.top/archives/7f189df5.html">Hexo 建站教程</a></li>
-</ul>
-<h2 id="2、Hexo-部署到-VPS"><a href="#2、Hexo-部署到-VPS" class="headerlink" title="2、Hexo 部署到 VPS"></a>2、Hexo 部署到 VPS</h2><p>搭建完博客后，我们需要进行搜索引擎优化（SEO）。现在我们的博客是托管在 GitHub Pages 上，但是 GitHub 屏蔽了百度的爬虫，对于中文网站来说，百度带来的流量是非常可观的，因此，我需要一个办法让百度收录我的博客。</p>
-<p>这里一个比较简单的办法就是把 Hexo 博客部署到自己的 VPS 上。</p>
-<h3 id="第一步：购买个性域名"><a href="#第一步：购买个性域名" class="headerlink" title="第一步：购买个性域名"></a>第一步：购买个性域名</h3><p>这里我推荐 Namesilo 这个平台，价格比较便宜，而且提供免费的域名隐私保护。</p>
-<p>具体过程见下文：</p>
-<ul>
-<li><a href="https://tding.top/archives/b48e2719.html">GitHub Pages 绑定域名</a></li>
-</ul>
-<h3 id="第二步：部署到-VPS"><a href="#第二步：部署到-VPS" class="headerlink" title="第二步：部署到 VPS"></a>第二步：部署到 VPS</h3><p>我们将 Hexo 在本地通过 <code>hexo generate</code> 生成静态文件，在通过 <code>hexo deploy</code> 部署到 VPS 上面，使用 Nginx 直接做 Web 服务器。</p>
-<p>这里我使用的是 <code>Git Hooks</code> 进行自动部署。</p>
-<p><strong>部署原理</strong>：我们在本地编辑文本，然后使用 Git 远程部署到 VPS 的 Git 仓库。<code>hexo d</code> 命令实际上只 deploy 了本地的 public 文件夹，<code>Git Hooks</code> 实际上就是当 Git 仓库收到最新的 push 时，将 Git 仓库接受到的内容复制到 VPS 上的网站目录内。相当于完成了手动将 public 文件夹复制到 VPS 的网站根目录里。</p>
-<p>具体过程见下文：</p>
-<ul>
-<li><a href="https://tding.top/archives/12a4e7e6.html">Hexo 博客部署到 VPS</a></li>
-</ul>
-<p><strong>注意：现在需要我们修改下 DNSPod 的解析地址，把域名解析到 VPS 的 IP 地址而不是 GitHub 的 IP 地址</strong>。</p>
-<h3 id="第三步：免费升级-HTTPS"><a href="#第三步：免费升级-HTTPS" class="headerlink" title="第三步：免费升级 HTTPS"></a>第三步：免费升级 HTTPS</h3><p>为了鼓励 https 的普及，EFF 成立了免费证书最大的提供商为 Let’s Encrypt，可以提供免费证书。</p>
-<p>具体过程见下文：</p>
-<ul>
-<li><a href="https://tding.top/archives/21caa4d0.html">Hexo 升级 HTTPS</a></li>
-</ul>
-<h3 id="第四步：提交搜索引擎收录"><a href="#第四步：提交搜索引擎收录" class="headerlink" title="第四步：提交搜索引擎收录"></a>第四步：提交搜索引擎收录</h3><p>通过上面三步，我们已经完成了 Hexo 在 VPS 上的部署并且开启了 HTTPS，下面我们只需要注册一个百度站长账号，然后提交 sitemap，静等百度收录我们的个人网站。</p>
-<p>具体过程见下文：</p>
-<ul>
-<li><a href="https://tding.top/archives/4ea54752.html">Hexo-NexT 博客提交搜索引擎收录</a></li>
-</ul>
-<h2 id="3、Hexo-双线部署在-GitHub-Pages-和-Coding-Pages"><a href="#3、Hexo-双线部署在-GitHub-Pages-和-Coding-Pages" class="headerlink" title="3、Hexo 双线部署在 GitHub Pages 和 Coding Pages"></a>3、Hexo 双线部署在 GitHub Pages 和 Coding Pages</h2><p>下面是双线部署的过程：</p>
-<ul>
-<li><a href="https://tding.top/archives/e09249d2.html">Hexo 博客部署到 Coding</a></li>
-</ul>
-<p>完成双线部署后，境外访问就会走 GitHub，境内就会走 Coding，大大提升了访问速度。</p>
-<h2 id="4、Hexo-博客部署在-GitHub-Pages-上并且配置-CDN-进行加速"><a href="#4、Hexo-博客部署在-GitHub-Pages-上并且配置-CDN-进行加速" class="headerlink" title="4、Hexo 博客部署在 GitHub Pages 上并且配置 CDN 进行加速"></a>4、Hexo 博客部署在 GitHub Pages 上并且配置 CDN 进行加速</h2><p>由于 Coding Pages 的服务并不是那么稳定，近期出现多次不能正常部署或访问 Pages 的问题，所以我现在采用了<strong>博客部署在 GitHub Pages 上并且配置 CDN 进行加速</strong>的方法。</p>
-<p>国内的 CDN 服务提供商有不少，但是基本都需要备案，因此我用了 Cloudflare 这个国外的 CDN 服务提供商。</p>
-<p>配置 CDN 的过程见：</p>
-<ul>
-<li><a href="https://tding.top/archives/12c6c559.html">Hexo 配置 Cloudflare 免费 CDN</a></li>
-</ul>
-<h2 id="5、Hexo-主题选择"><a href="#5、Hexo-主题选择" class="headerlink" title="5、Hexo 主题选择"></a>5、Hexo 主题选择</h2><p>Hexo 有很多简洁美观的主题，大家可以去 <a href="https://hexo.io/themes/">Hexo-Themes</a> 去选择自己喜欢的主题。</p>
-<p>我使用过 Yilia 和 NexT 这两款主题，下面是我美化过程的一个记录。</p>
-<h3 id="Hexo-NexT-主题美化"><a href="#Hexo-NexT-主题美化" class="headerlink" title="Hexo NexT 主题美化"></a>Hexo NexT 主题美化</h3><h4 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h4><p>下面是 NexT 主题的基本配置以及内置的 Tag 插件使用说明：</p>
-<ul>
-<li><a href="https://tding.top/archives/42c38b10.html">Hexo-NexT (v7.0+) 主题配置</a></li>
-<li><a href="https://tding.top/archives/29bfe8c9.html">Hexo-NexT Tag 插件的使用</a></li>
-</ul>
-<h4 id="自定义子页面"><a href="#自定义子页面" class="headerlink" title="自定义子页面"></a>自定义子页面</h4><p>NexT 主题自带的子页面很少，只有首页、标签、分类、归档、关于等子页面。为了记录更多的内容，我添加了<strong>豆瓣读书、豆瓣电影、画廊、热榜</strong>等子页面，具体过程以及效果见下面：</p>
-<ul>
-<li>Hexo 加入豆瓣读书页面<ul>
-<li>具体效果见：<a href="https://tding.top/books/">小丁的个人博客 - 豆瓣电影</a></li>
-</ul>
-</li>
-<li>Hexo-NexT 实现相册<ul>
-<li>具体效果见：<a href="https://tding.top/gallery/">小丁的个人博客 - 画廊</a></li>
-</ul>
-</li>
-<li>Hexo-NexT 新增阅读排行页面<ul>
-<li>具体效果见：<a href="https://tding.top/top/">小丁的个人博客 - 热榜</a></li>
-</ul>
-</li>
-<li>Hexo-NexT 新增友链<ul>
-<li>具体效果见：<a href="https://tding.top/about/links.html">小丁的个人博客 - 友链</a></li>
-</ul>
-</li>
-</ul>
-<h4 id="第三方服务配置"><a href="#第三方服务配置" class="headerlink" title="第三方服务配置"></a>第三方服务配置</h4><p>有一些服务，包括评论、在线聊天、文章评分、分享等功能无法通过静态页面实现，所以我用了第三方服务商提供上述服务，具体配置过程如下：</p>
-<ul>
-<li><a href="https://tding.top/archives/7696c13f.html">Hexo-NexT 添加第三方服务</a></li>
-</ul>
-<p>由于 Disqus 这个评论服务需要科学上网才能使用，不利于交流，因此我换用了 Valine，配置过程如下：</p>
-<ul>
-<li><a href="https://tding.top/archives/ed8b904f.html">Hexo-NexT 配置 Valine</a></li>
-</ul>
-<p>有时候，我们想要在个人博客的 <a href="https://tding.top/about/">“关于”</a> 栏目下展示自己的 GitHub Chart，如下图所示：</p>
-<p><a href="https://ghchart.rshah.org/dta0502"><img src="https://ghchart.rshah.org/dta0502" alt="img"></a></p>
-<p>具体设置过程可以见：</p>
-<ul>
-<li><a href="https://tding.top/archives/90b9ba07.html">Hexo 博客展示 GitHub Chart</a></li>
-</ul>
-<p>更多第三方服务配置：</p>
-<ul>
-<li><a href="https://tding.top/archives/567debe0.html">本博客当前使用的插件总结</a></li>
-</ul>
-<h4 id="页面加载性能优化"><a href="#页面加载性能优化" class="headerlink" title="页面加载性能优化"></a>页面加载性能优化</h4><ul>
-<li><a href="https://tding.top/archives/7e5b094d.html">Hexo-NexT 加载性能优化</a></li>
-</ul>
-<h4 id="自定义样式"><a href="#自定义样式" class="headerlink" title="自定义样式"></a>自定义样式</h4><p>下面是一些自定义样式美化：</p>
-<ul>
-<li><a href="https://tding.top/archives/761b6f4d.html">Hexo-NexT 设置博客背景图片</a></li>
-<li><a href="https://tding.top/archives/dd68b70.html">Hexo-NexT 增加 canvas 粒子时钟</a></li>
-<li><a href="https://tding.top/archives/58cff12b.html">Hexo-NexT 添加打字特效、鼠标点击特效</a></li>
-<li><a href="https://tding.top/archives/bd4d996d.html">Hexo-NexT 代码块折叠</a></li>
-<li><a href="https://tding.top/archives/dfac1e9c.html">Hexo-NexT 主题样式美化 - 动画设置</a></li>
-</ul>
-<p>字体设置：</p>
-<ul>
-<li><a href="https://tding.top/archives/3cdfe265.html">Hexo-NexT 支持简体繁体一键切换</a></li>
-</ul>
-<h4 id="NexT-版本更新记录"><a href="#NexT-版本更新记录" class="headerlink" title="NexT 版本更新记录"></a>NexT 版本更新记录</h4><ul>
-<li><a href="https://tding.top/archives/2bd6d82.html">Hexo-NexT 版本更新记录</a></li>
-</ul>
-<h3 id="Hexo-Yilia-主题美化"><a href="#Hexo-Yilia-主题美化" class="headerlink" title="Hexo Yilia 主题美化"></a>Hexo Yilia 主题美化</h3><ul>
-<li><a href="https://tding.top/archives/9a232bbe.html">Hexo-Yilia 进阶笔记</a></li>
-</ul>
-<blockquote>
-<p>我的个人博客地址：<a href="https://tding.top/">小丁的个人博客</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML入门笔记</title>
     <url>/liuqi_blogs/2022/01/24/HTML%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h4 id="HTML-结构"><a href="#HTML-结构" class="headerlink" title="HTML 结构"></a>HTML 结构</h4><hr>
@@ -2488,6 +2365,129 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo+next搭建博客</title>
+    <url>/liuqi_blogs/2018/02/20/Hexo-next%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<span id="more"></span>
+
+<h2 id="1、Hexo-建站"><a href="#1、Hexo-建站" class="headerlink" title="1、Hexo 建站"></a>1、Hexo 建站</h2><p>首先我们可以在 GitHub Pages 上搭建个人博客。</p>
+<p>具体过程见下文：</p>
+<ul>
+<li><a href="https://tding.top/archives/7f189df5.html">Hexo 建站教程</a></li>
+</ul>
+<h2 id="2、Hexo-部署到-VPS"><a href="#2、Hexo-部署到-VPS" class="headerlink" title="2、Hexo 部署到 VPS"></a>2、Hexo 部署到 VPS</h2><p>搭建完博客后，我们需要进行搜索引擎优化（SEO）。现在我们的博客是托管在 GitHub Pages 上，但是 GitHub 屏蔽了百度的爬虫，对于中文网站来说，百度带来的流量是非常可观的，因此，我需要一个办法让百度收录我的博客。</p>
+<p>这里一个比较简单的办法就是把 Hexo 博客部署到自己的 VPS 上。</p>
+<h3 id="第一步：购买个性域名"><a href="#第一步：购买个性域名" class="headerlink" title="第一步：购买个性域名"></a>第一步：购买个性域名</h3><p>这里我推荐 Namesilo 这个平台，价格比较便宜，而且提供免费的域名隐私保护。</p>
+<p>具体过程见下文：</p>
+<ul>
+<li><a href="https://tding.top/archives/b48e2719.html">GitHub Pages 绑定域名</a></li>
+</ul>
+<h3 id="第二步：部署到-VPS"><a href="#第二步：部署到-VPS" class="headerlink" title="第二步：部署到 VPS"></a>第二步：部署到 VPS</h3><p>我们将 Hexo 在本地通过 <code>hexo generate</code> 生成静态文件，在通过 <code>hexo deploy</code> 部署到 VPS 上面，使用 Nginx 直接做 Web 服务器。</p>
+<p>这里我使用的是 <code>Git Hooks</code> 进行自动部署。</p>
+<p><strong>部署原理</strong>：我们在本地编辑文本，然后使用 Git 远程部署到 VPS 的 Git 仓库。<code>hexo d</code> 命令实际上只 deploy 了本地的 public 文件夹，<code>Git Hooks</code> 实际上就是当 Git 仓库收到最新的 push 时，将 Git 仓库接受到的内容复制到 VPS 上的网站目录内。相当于完成了手动将 public 文件夹复制到 VPS 的网站根目录里。</p>
+<p>具体过程见下文：</p>
+<ul>
+<li><a href="https://tding.top/archives/12a4e7e6.html">Hexo 博客部署到 VPS</a></li>
+</ul>
+<p><strong>注意：现在需要我们修改下 DNSPod 的解析地址，把域名解析到 VPS 的 IP 地址而不是 GitHub 的 IP 地址</strong>。</p>
+<h3 id="第三步：免费升级-HTTPS"><a href="#第三步：免费升级-HTTPS" class="headerlink" title="第三步：免费升级 HTTPS"></a>第三步：免费升级 HTTPS</h3><p>为了鼓励 https 的普及，EFF 成立了免费证书最大的提供商为 Let’s Encrypt，可以提供免费证书。</p>
+<p>具体过程见下文：</p>
+<ul>
+<li><a href="https://tding.top/archives/21caa4d0.html">Hexo 升级 HTTPS</a></li>
+</ul>
+<h3 id="第四步：提交搜索引擎收录"><a href="#第四步：提交搜索引擎收录" class="headerlink" title="第四步：提交搜索引擎收录"></a>第四步：提交搜索引擎收录</h3><p>通过上面三步，我们已经完成了 Hexo 在 VPS 上的部署并且开启了 HTTPS，下面我们只需要注册一个百度站长账号，然后提交 sitemap，静等百度收录我们的个人网站。</p>
+<p>具体过程见下文：</p>
+<ul>
+<li><a href="https://tding.top/archives/4ea54752.html">Hexo-NexT 博客提交搜索引擎收录</a></li>
+</ul>
+<h2 id="3、Hexo-双线部署在-GitHub-Pages-和-Coding-Pages"><a href="#3、Hexo-双线部署在-GitHub-Pages-和-Coding-Pages" class="headerlink" title="3、Hexo 双线部署在 GitHub Pages 和 Coding Pages"></a>3、Hexo 双线部署在 GitHub Pages 和 Coding Pages</h2><p>下面是双线部署的过程：</p>
+<ul>
+<li><a href="https://tding.top/archives/e09249d2.html">Hexo 博客部署到 Coding</a></li>
+</ul>
+<p>完成双线部署后，境外访问就会走 GitHub，境内就会走 Coding，大大提升了访问速度。</p>
+<h2 id="4、Hexo-博客部署在-GitHub-Pages-上并且配置-CDN-进行加速"><a href="#4、Hexo-博客部署在-GitHub-Pages-上并且配置-CDN-进行加速" class="headerlink" title="4、Hexo 博客部署在 GitHub Pages 上并且配置 CDN 进行加速"></a>4、Hexo 博客部署在 GitHub Pages 上并且配置 CDN 进行加速</h2><p>由于 Coding Pages 的服务并不是那么稳定，近期出现多次不能正常部署或访问 Pages 的问题，所以我现在采用了<strong>博客部署在 GitHub Pages 上并且配置 CDN 进行加速</strong>的方法。</p>
+<p>国内的 CDN 服务提供商有不少，但是基本都需要备案，因此我用了 Cloudflare 这个国外的 CDN 服务提供商。</p>
+<p>配置 CDN 的过程见：</p>
+<ul>
+<li><a href="https://tding.top/archives/12c6c559.html">Hexo 配置 Cloudflare 免费 CDN</a></li>
+</ul>
+<h2 id="5、Hexo-主题选择"><a href="#5、Hexo-主题选择" class="headerlink" title="5、Hexo 主题选择"></a>5、Hexo 主题选择</h2><p>Hexo 有很多简洁美观的主题，大家可以去 <a href="https://hexo.io/themes/">Hexo-Themes</a> 去选择自己喜欢的主题。</p>
+<p>我使用过 Yilia 和 NexT 这两款主题，下面是我美化过程的一个记录。</p>
+<h3 id="Hexo-NexT-主题美化"><a href="#Hexo-NexT-主题美化" class="headerlink" title="Hexo NexT 主题美化"></a>Hexo NexT 主题美化</h3><h4 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h4><p>下面是 NexT 主题的基本配置以及内置的 Tag 插件使用说明：</p>
+<ul>
+<li><a href="https://tding.top/archives/42c38b10.html">Hexo-NexT (v7.0+) 主题配置</a></li>
+<li><a href="https://tding.top/archives/29bfe8c9.html">Hexo-NexT Tag 插件的使用</a></li>
+</ul>
+<h4 id="自定义子页面"><a href="#自定义子页面" class="headerlink" title="自定义子页面"></a>自定义子页面</h4><p>NexT 主题自带的子页面很少，只有首页、标签、分类、归档、关于等子页面。为了记录更多的内容，我添加了<strong>豆瓣读书、豆瓣电影、画廊、热榜</strong>等子页面，具体过程以及效果见下面：</p>
+<ul>
+<li>Hexo 加入豆瓣读书页面<ul>
+<li>具体效果见：<a href="https://tding.top/books/">小丁的个人博客 - 豆瓣电影</a></li>
+</ul>
+</li>
+<li>Hexo-NexT 实现相册<ul>
+<li>具体效果见：<a href="https://tding.top/gallery/">小丁的个人博客 - 画廊</a></li>
+</ul>
+</li>
+<li>Hexo-NexT 新增阅读排行页面<ul>
+<li>具体效果见：<a href="https://tding.top/top/">小丁的个人博客 - 热榜</a></li>
+</ul>
+</li>
+<li>Hexo-NexT 新增友链<ul>
+<li>具体效果见：<a href="https://tding.top/about/links.html">小丁的个人博客 - 友链</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="第三方服务配置"><a href="#第三方服务配置" class="headerlink" title="第三方服务配置"></a>第三方服务配置</h4><p>有一些服务，包括评论、在线聊天、文章评分、分享等功能无法通过静态页面实现，所以我用了第三方服务商提供上述服务，具体配置过程如下：</p>
+<ul>
+<li><a href="https://tding.top/archives/7696c13f.html">Hexo-NexT 添加第三方服务</a></li>
+</ul>
+<p>由于 Disqus 这个评论服务需要科学上网才能使用，不利于交流，因此我换用了 Valine，配置过程如下：</p>
+<ul>
+<li><a href="https://tding.top/archives/ed8b904f.html">Hexo-NexT 配置 Valine</a></li>
+</ul>
+<p>有时候，我们想要在个人博客的 <a href="https://tding.top/about/">“关于”</a> 栏目下展示自己的 GitHub Chart，如下图所示：</p>
+<p><a href="https://ghchart.rshah.org/dta0502"><img src="https://ghchart.rshah.org/dta0502" alt="img"></a></p>
+<p>具体设置过程可以见：</p>
+<ul>
+<li><a href="https://tding.top/archives/90b9ba07.html">Hexo 博客展示 GitHub Chart</a></li>
+</ul>
+<p>更多第三方服务配置：</p>
+<ul>
+<li><a href="https://tding.top/archives/567debe0.html">本博客当前使用的插件总结</a></li>
+</ul>
+<h4 id="页面加载性能优化"><a href="#页面加载性能优化" class="headerlink" title="页面加载性能优化"></a>页面加载性能优化</h4><ul>
+<li><a href="https://tding.top/archives/7e5b094d.html">Hexo-NexT 加载性能优化</a></li>
+</ul>
+<h4 id="自定义样式"><a href="#自定义样式" class="headerlink" title="自定义样式"></a>自定义样式</h4><p>下面是一些自定义样式美化：</p>
+<ul>
+<li><a href="https://tding.top/archives/761b6f4d.html">Hexo-NexT 设置博客背景图片</a></li>
+<li><a href="https://tding.top/archives/dd68b70.html">Hexo-NexT 增加 canvas 粒子时钟</a></li>
+<li><a href="https://tding.top/archives/58cff12b.html">Hexo-NexT 添加打字特效、鼠标点击特效</a></li>
+<li><a href="https://tding.top/archives/bd4d996d.html">Hexo-NexT 代码块折叠</a></li>
+<li><a href="https://tding.top/archives/dfac1e9c.html">Hexo-NexT 主题样式美化 - 动画设置</a></li>
+</ul>
+<p>字体设置：</p>
+<ul>
+<li><a href="https://tding.top/archives/3cdfe265.html">Hexo-NexT 支持简体繁体一键切换</a></li>
+</ul>
+<h4 id="NexT-版本更新记录"><a href="#NexT-版本更新记录" class="headerlink" title="NexT 版本更新记录"></a>NexT 版本更新记录</h4><ul>
+<li><a href="https://tding.top/archives/2bd6d82.html">Hexo-NexT 版本更新记录</a></li>
+</ul>
+<h3 id="Hexo-Yilia-主题美化"><a href="#Hexo-Yilia-主题美化" class="headerlink" title="Hexo Yilia 主题美化"></a>Hexo Yilia 主题美化</h3><ul>
+<li><a href="https://tding.top/archives/9a232bbe.html">Hexo-Yilia 进阶笔记</a></li>
+</ul>
+<blockquote>
+<p>我的个人博客地址：<a href="https://tding.top/">小丁的个人博客</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JS判断浏览器版本</title>
     <url>/liuqi_blogs/2021/07/21/JS%E5%88%A4%E6%96%AD%E6%B5%8F%E8%A7%88%E5%99%A8%E7%89%88%E6%9C%AC/</url>
     <content><![CDATA[<p>JS 判断浏览器版本的方法。</p>
@@ -2823,12 +2823,12 @@
 <p>1、从服务器上下载文件<br>scp username@servername:/path/filename /var/www/local_dir（本地目录）</p>
 <span id="more"></span>
 
-<p> 例如scp <a href="mailto:&#x72;&#111;&#x6f;&#116;&#x40;&#49;&#57;&#50;&#x2e;&#49;&#54;&#56;&#46;&#x30;&#x2e;&#x31;&#x30;&#x31;">&#x72;&#111;&#x6f;&#116;&#x40;&#49;&#57;&#50;&#x2e;&#49;&#54;&#56;&#46;&#x30;&#x2e;&#x31;&#x30;&#x31;</a>:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</p>
+<p> 例如scp <a href="mailto:&#114;&#x6f;&#111;&#x74;&#64;&#49;&#57;&#x32;&#46;&#49;&#x36;&#x38;&#46;&#48;&#x2e;&#49;&#x30;&#49;">&#114;&#x6f;&#111;&#x74;&#64;&#49;&#57;&#x32;&#46;&#49;&#x36;&#x38;&#46;&#48;&#x2e;&#49;&#x30;&#49;</a>:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）</p>
 <p>2、上传本地文件到服务器<br>scp /path/filename username@servername:/path   </p>
-<p>例如scp /var/www/test.php  <a href="mailto:&#x72;&#111;&#111;&#116;&#x40;&#x31;&#57;&#50;&#x2e;&#49;&#54;&#x38;&#x2e;&#48;&#x2e;&#49;&#x30;&#49;">&#x72;&#111;&#111;&#116;&#x40;&#x31;&#57;&#50;&#x2e;&#49;&#54;&#x38;&#x2e;&#48;&#x2e;&#49;&#x30;&#49;</a>:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中</p>
+<p>例如scp /var/www/test.php  <a href="mailto:&#x72;&#x6f;&#x6f;&#116;&#x40;&#49;&#57;&#50;&#x2e;&#x31;&#x36;&#x38;&#46;&#48;&#x2e;&#x31;&#48;&#49;">&#x72;&#x6f;&#x6f;&#116;&#x40;&#49;&#57;&#50;&#x2e;&#x31;&#x36;&#x38;&#46;&#48;&#x2e;&#x31;&#48;&#49;</a>:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中</p>
 <p>3、从服务器下载整个目录<br>scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）</p>
-<p>例如:scp -r <a href="mailto:&#114;&#x6f;&#111;&#116;&#x40;&#x31;&#57;&#50;&#x2e;&#x31;&#x36;&#x38;&#x2e;&#48;&#46;&#x31;&#48;&#49;">&#114;&#x6f;&#111;&#116;&#x40;&#x31;&#57;&#50;&#x2e;&#x31;&#x36;&#x38;&#x2e;&#48;&#46;&#x31;&#48;&#49;</a>:/var/www/test  /var/www/  </p>
-<p>4、上传目录到服务器<br>scp  -r local_dir username@servername:remote_dir<br>例如：scp -r test  <a href="mailto:&#114;&#111;&#x6f;&#116;&#x40;&#49;&#57;&#x32;&#46;&#x31;&#x36;&#56;&#x2e;&#48;&#46;&#49;&#x30;&#49;">&#114;&#111;&#x6f;&#116;&#x40;&#49;&#57;&#x32;&#46;&#x31;&#x36;&#56;&#x2e;&#48;&#46;&#49;&#x30;&#49;</a>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
+<p>例如:scp -r <a href="mailto:&#x72;&#111;&#x6f;&#x74;&#64;&#x31;&#x39;&#50;&#x2e;&#49;&#x36;&#56;&#46;&#x30;&#46;&#x31;&#x30;&#49;">&#x72;&#111;&#x6f;&#x74;&#64;&#x31;&#x39;&#50;&#x2e;&#49;&#x36;&#56;&#46;&#x30;&#46;&#x31;&#x30;&#49;</a>:/var/www/test  /var/www/  </p>
+<p>4、上传目录到服务器<br>scp  -r local_dir username@servername:remote_dir<br>例如：scp -r test  <a href="mailto:&#114;&#111;&#111;&#x74;&#x40;&#49;&#57;&#50;&#46;&#49;&#54;&#x38;&#46;&#x30;&#46;&#49;&#x30;&#49;">&#114;&#111;&#111;&#x74;&#x40;&#49;&#57;&#50;&#46;&#49;&#54;&#x38;&#46;&#x30;&#46;&#49;&#x30;&#49;</a>:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录</p>
 <hr>
 <p>本文介绍几种常见的方法，把文件上传到Linux服务器中！</p>
 <p>常见有使用：scp命令、xshell软件里的xftp程序、U盘挂载、服务器自带的lrzsz程序。</p>
@@ -3956,112 +3956,6 @@ Markdown 还没有办法指定图片的高度与宽度，如果你需要的话�
       </tags>
   </entry>
   <entry>
-    <title>单页面应用实现浏览器前进后退的方法</title>
-    <url>/liuqi_blogs/2022/01/26/%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E5%89%8D%E8%BF%9B%E5%90%8E%E9%80%80%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>Ajax 可以在不需要页面的刷新动作时获取数据（页面的 URL 也会保持不变），但是问题时，这样也就无法通过浏览器进行前进与后退操作。</p>
-<p>现在这个问题可以通过 <code>history.pushState()</code> 方法以及 <code>window.onpopstate</code> 事件监听去解决。</p>
-<span id="more"></span>
-
-<h2 id="history-pushState-用法"><a href="#history-pushState-用法" class="headerlink" title="history.pushState() 用法"></a><code>history.pushState()</code> 用法</h2><p><code>history.pushState()</code> 方法可以<strong>无刷新</strong>地向当前 history 插入一条历史状态。</p>
-<p>语法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history.pushState(stateObject, title, url);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>stateObject：传入的状态对象。<strong>当前进（后退）到某一新的状态时，会触发 popstate 事件。此事件对象 <code>event.state</code> 存储的就是这个 stateObject 的值</strong></li>
-<li>title：新状态的标题（目前，大多数浏览器并不支持该参数，建议传 null 值）</li>
-<li>url：状态对应的历史记录的地址</li>
-</ul>
-<h2 id="window-onpopstate-事件监听"><a href="#window-onpopstate-事件监听" class="headerlink" title="window.onpopstate 事件监听"></a><code>window.onpopstate</code> 事件监听</h2><p>popstate 事件只会在浏览器某些行为下触发，比如<strong>点击后退、前进按钮</strong>，或者在 JavaScript 中调用 <code>history.back()</code>、<code>history.forward()</code>、<code>history.go()</code> 方法。</p>
-<blockquote>
-<ul>
-<li><code>History.go()</code></li>
-<li><code>History.back()</code>：等同于 <code>history.go(-1)</code></li>
-<li><code>History.forward()</code>：等同于 <code>history.go(1)</code></li>
-</ul>
-</blockquote>
-<p>实例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">window.onpopstate = function(event) &#123;</span><br><span class="line">  alert(&quot;location: &quot; + document.location + &quot;, state: &quot; + JSON.stringify(event.state));</span><br><span class="line">&#125;;</span><br><span class="line">//绑定事件处理函数.</span><br><span class="line">history.pushState(&#123;page: 1&#125;, &quot;title 1&quot;, &quot;?page=1&quot;);    //添加并激活一个历史记录条目 http://example.com/example.html?page=1,条目索引为1</span><br><span class="line">history.pushState(&#123;page: 2&#125;, &quot;title 2&quot;, &quot;?page=2&quot;);    //添加并激活一个历史记录条目 http://example.com/example.html?page=2,条目索引为2</span><br><span class="line">history.replaceState(&#123;page: 3&#125;, &quot;title 3&quot;, &quot;?page=3&quot;); //修改当前激活的历史记录条目 http://ex..?page=2 变为 http://ex..?page=3,条目索引为3</span><br><span class="line">history.back(); // 弹出 &quot;location: http://example.com/example.html?page=1, state: &#123;&quot;page&quot;:1&#125;&quot;</span><br><span class="line">history.back(); // 弹出 &quot;location: http://example.com/example.html, state: null</span><br><span class="line">history.go(2);  // 弹出 &quot;location: http://example.com/example.html?page=3, state: &#123;&quot;page&quot;:3&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>现在有一个报表应用用于展示某年的销售数据。</p>
-<ol>
-<li>刚打开时，没有任何报表数据：</li>
-</ol>
-<p>2015 2016 2017 2018</p>
-<table>
-<thead>
-<tr>
-<th align="left">一季度</th>
-<th align="left">二季度</th>
-<th align="left">三季度</th>
-<th align="left">四季度</th>
-<th align="left">总和</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">无</td>
-<td align="left">无</td>
-<td align="left">无</td>
-<td align="left">无</td>
-<td align="left">无</td>
-</tr>
-</tbody></table>
-<p>此时的 URL: <code>http://example.com/getFinaData.php</code></p>
-<ol>
-<li>点击按钮通过 Ajax 加载 2015 年的数据</li>
-</ol>
-<p>2015 2016 2017 2018</p>
-<table>
-<thead>
-<tr>
-<th align="left">一季度</th>
-<th align="left">二季度</th>
-<th align="left">三季度</th>
-<th align="left">四季度</th>
-<th align="left">总和</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">122 万</td>
-<td align="left">147 万</td>
-<td align="left">135 万</td>
-<td align="left">153 万</td>
-<td align="left">557 万</td>
-</tr>
-</tbody></table>
-<p><strong>同时我们为这一次数据加载新增一条历史状态</strong>：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history.pushState(&#123;year: 2015&#125;, &quot;页面标题&quot;, &quot;getFinaData.php?year=2015&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>此时的 URL 变为：<code>http://example.com/getFinaData.php?year=2015</code></p>
-<p>同时你会发现浏览器的后退按钮激活了，因为在 <code>pushState()</code> 的作用下无刷新地新增了一条历史状态。</p>
-<ol>
-<li>重复上一步，我们再为这一次数据加载新增一条历史状态：</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history.pushState(&#123;year: 2018&#125;, &quot;页面标题&quot;, &quot;getFinaData.php?year=2018&quot;);</span><br></pre></td></tr></table></figure>
-
-<p>此时的 URL 变为：<code>http://example.com/getFinaData.php?year=2018</code></p>
-<ol>
-<li>现在，我们使用后退键，看看会发生什么？</li>
-</ol>
-<p>URL 重新变回：<code>http://example.com/getFinaData.php?year=2015</code></p>
-<p><strong>但是，界面并没有发生变化（表格依旧显示的是 2018 年的数据）</strong></p>
-<p><strong>因为点击后退键只是简单地切回到上一个状态，而这个状态是无刷新的，我们要做的捕获这个切换到的状态，并获取上一次保存的状态值（<code>pushState()</code> 的第一个参数），然后再调用一次 ajax 请求数据。</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">window.onpopstate = function(event) &#123;</span><br><span class="line">  // 获取存储的状态</span><br><span class="line">  var params = event.state; // &#123;year: 2015&#125;</span><br><span class="line">  </span><br><span class="line">  // 根据存储的状态，再次使用Ajax加载数据并插入到视图中</span><br><span class="line">  </span><br><span class="line">  // ...具体代码省略</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>现在，成功实现无刷新后退到上一次界面。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://www.cnblogs.com/juicy-initial/p/11560107.html">JS 监听浏览器后退事件</a></li>
-<li><a href="https://blog.csdn.net/weixin_39667945/article/details/88563003">history.pushState()</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate">window.onpopstate</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>javascript</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端页面性能优化</title>
     <url>/liuqi_blogs/2022/02/12/%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<p>前端 Vue 工程的性能优化笔记。</p>
@@ -4336,6 +4230,112 @@ Markdown 还没有办法指定图片的高度与宽度，如果你需要的话�
       </categories>
       <tags>
         <tag>前端，性能优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>单页面应用实现浏览器前进后退的方法</title>
+    <url>/liuqi_blogs/2022/01/26/%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E5%89%8D%E8%BF%9B%E5%90%8E%E9%80%80%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>Ajax 可以在不需要页面的刷新动作时获取数据（页面的 URL 也会保持不变），但是问题时，这样也就无法通过浏览器进行前进与后退操作。</p>
+<p>现在这个问题可以通过 <code>history.pushState()</code> 方法以及 <code>window.onpopstate</code> 事件监听去解决。</p>
+<span id="more"></span>
+
+<h2 id="history-pushState-用法"><a href="#history-pushState-用法" class="headerlink" title="history.pushState() 用法"></a><code>history.pushState()</code> 用法</h2><p><code>history.pushState()</code> 方法可以<strong>无刷新</strong>地向当前 history 插入一条历史状态。</p>
+<p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history.pushState(stateObject, title, url);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>stateObject：传入的状态对象。<strong>当前进（后退）到某一新的状态时，会触发 popstate 事件。此事件对象 <code>event.state</code> 存储的就是这个 stateObject 的值</strong></li>
+<li>title：新状态的标题（目前，大多数浏览器并不支持该参数，建议传 null 值）</li>
+<li>url：状态对应的历史记录的地址</li>
+</ul>
+<h2 id="window-onpopstate-事件监听"><a href="#window-onpopstate-事件监听" class="headerlink" title="window.onpopstate 事件监听"></a><code>window.onpopstate</code> 事件监听</h2><p>popstate 事件只会在浏览器某些行为下触发，比如<strong>点击后退、前进按钮</strong>，或者在 JavaScript 中调用 <code>history.back()</code>、<code>history.forward()</code>、<code>history.go()</code> 方法。</p>
+<blockquote>
+<ul>
+<li><code>History.go()</code></li>
+<li><code>History.back()</code>：等同于 <code>history.go(-1)</code></li>
+<li><code>History.forward()</code>：等同于 <code>history.go(1)</code></li>
+</ul>
+</blockquote>
+<p>实例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">window.onpopstate = function(event) &#123;</span><br><span class="line">  alert(&quot;location: &quot; + document.location + &quot;, state: &quot; + JSON.stringify(event.state));</span><br><span class="line">&#125;;</span><br><span class="line">//绑定事件处理函数.</span><br><span class="line">history.pushState(&#123;page: 1&#125;, &quot;title 1&quot;, &quot;?page=1&quot;);    //添加并激活一个历史记录条目 http://example.com/example.html?page=1,条目索引为1</span><br><span class="line">history.pushState(&#123;page: 2&#125;, &quot;title 2&quot;, &quot;?page=2&quot;);    //添加并激活一个历史记录条目 http://example.com/example.html?page=2,条目索引为2</span><br><span class="line">history.replaceState(&#123;page: 3&#125;, &quot;title 3&quot;, &quot;?page=3&quot;); //修改当前激活的历史记录条目 http://ex..?page=2 变为 http://ex..?page=3,条目索引为3</span><br><span class="line">history.back(); // 弹出 &quot;location: http://example.com/example.html?page=1, state: &#123;&quot;page&quot;:1&#125;&quot;</span><br><span class="line">history.back(); // 弹出 &quot;location: http://example.com/example.html, state: null</span><br><span class="line">history.go(2);  // 弹出 &quot;location: http://example.com/example.html?page=3, state: &#123;&quot;page&quot;:3&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>现在有一个报表应用用于展示某年的销售数据。</p>
+<ol>
+<li>刚打开时，没有任何报表数据：</li>
+</ol>
+<p>2015 2016 2017 2018</p>
+<table>
+<thead>
+<tr>
+<th align="left">一季度</th>
+<th align="left">二季度</th>
+<th align="left">三季度</th>
+<th align="left">四季度</th>
+<th align="left">总和</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">无</td>
+<td align="left">无</td>
+<td align="left">无</td>
+<td align="left">无</td>
+<td align="left">无</td>
+</tr>
+</tbody></table>
+<p>此时的 URL: <code>http://example.com/getFinaData.php</code></p>
+<ol>
+<li>点击按钮通过 Ajax 加载 2015 年的数据</li>
+</ol>
+<p>2015 2016 2017 2018</p>
+<table>
+<thead>
+<tr>
+<th align="left">一季度</th>
+<th align="left">二季度</th>
+<th align="left">三季度</th>
+<th align="left">四季度</th>
+<th align="left">总和</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">122 万</td>
+<td align="left">147 万</td>
+<td align="left">135 万</td>
+<td align="left">153 万</td>
+<td align="left">557 万</td>
+</tr>
+</tbody></table>
+<p><strong>同时我们为这一次数据加载新增一条历史状态</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history.pushState(&#123;year: 2015&#125;, &quot;页面标题&quot;, &quot;getFinaData.php?year=2015&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>此时的 URL 变为：<code>http://example.com/getFinaData.php?year=2015</code></p>
+<p>同时你会发现浏览器的后退按钮激活了，因为在 <code>pushState()</code> 的作用下无刷新地新增了一条历史状态。</p>
+<ol>
+<li>重复上一步，我们再为这一次数据加载新增一条历史状态：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history.pushState(&#123;year: 2018&#125;, &quot;页面标题&quot;, &quot;getFinaData.php?year=2018&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>此时的 URL 变为：<code>http://example.com/getFinaData.php?year=2018</code></p>
+<ol>
+<li>现在，我们使用后退键，看看会发生什么？</li>
+</ol>
+<p>URL 重新变回：<code>http://example.com/getFinaData.php?year=2015</code></p>
+<p><strong>但是，界面并没有发生变化（表格依旧显示的是 2018 年的数据）</strong></p>
+<p><strong>因为点击后退键只是简单地切回到上一个状态，而这个状态是无刷新的，我们要做的捕获这个切换到的状态，并获取上一次保存的状态值（<code>pushState()</code> 的第一个参数），然后再调用一次 ajax 请求数据。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">window.onpopstate = function(event) &#123;</span><br><span class="line">  // 获取存储的状态</span><br><span class="line">  var params = event.state; // &#123;year: 2015&#125;</span><br><span class="line">  </span><br><span class="line">  // 根据存储的状态，再次使用Ajax加载数据并插入到视图中</span><br><span class="line">  </span><br><span class="line">  // ...具体代码省略</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>现在，成功实现无刷新后退到上一次界面。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.cnblogs.com/juicy-initial/p/11560107.html">JS 监听浏览器后退事件</a></li>
+<li><a href="https://blog.csdn.net/weixin_39667945/article/details/88563003">history.pushState()</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate">window.onpopstate</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -4899,180 +4899,6 @@ Markdown 还没有办法指定图片的高度与宽度，如果你需要的话�
       </tags>
   </entry>
   <entry>
-    <title>小程序入门</title>
-    <url>/liuqi_blogs/2022/01/19/%E7%AC%AC%E4%B8%89%E5%91%A8-%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E6%95%B4%E4%BD%93/</url>
-    <content><![CDATA[<h1 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h1><h2 id="1-是什么"><a href="#1-是什么" class="headerlink" title="1. 是什么?"></a>1. 是什么?</h2><ul>
-<li><p>不是网页  没有跨域</p>
-</li>
-<li><p>不是app  </p>
-</li>
-<li><p>嵌套在app中的一种衍生产品 </p>
-<ul>
-<li>微信小程序</li>
-<li>支付宝小程序</li>
-<li>字节跳动小程序</li>
-<li>qq小程序</li>
-<li>百度小程序<span id="more"></span>
-<h2 id="2-下载"><a href="#2-下载" class="headerlink" title="2. 下载"></a>2. 下载</h2></li>
-</ul>
-</li>
-<li><p>官网 : <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html</a></p>
-</li>
-</ul>
-<img src="./image/image-20200713091718367.png" alt="image-20200713091718367" style="zoom: 33%;" /> 
-
-<h2 id="3-开发工具"><a href="#3-开发工具" class="headerlink" title="3. 开发工具"></a>3. 开发工具</h2><img src="./image/image-20200713092601472.png" alt="image-20200713092601472" style="zoom:23%;" /> 
-
-<ul>
-<li>开启对请求的不校验</li>
-</ul>
-<img src="./image/image-20200713092757423.png" alt="image-20200713092757423" style="zoom:33%;" /> 
-
-<h2 id="4-文档介绍"><a href="#4-文档介绍" class="headerlink" title="4. 文档介绍"></a>4. 文档介绍</h2><img src="./image/image-20200713095622026.png" alt="image-20200713095622026" style="zoom:50%;" /> 
-
-<ul>
-<li>指南: 大的方向 小程序大概怎么开发</li>
-<li>框架: 文件的配置和语法</li>
-<li>组件: 页面的ui</li>
-<li>api : 跳转 请求 嵌入网页  提示框…</li>
-</ul>
-<h2 id="5-新建页面"><a href="#5-新建页面" class="headerlink" title="5. 新建页面"></a>5. 新建页面</h2><p><img src="./image/image-20200713101122560.png" alt="image-20200713101122560"></p>
-<h3 id="5-1-入口文件"><a href="#5-1-入口文件" class="headerlink" title="5.1 入口文件"></a>5.1 入口文件</h3><p><img src="./image/image-20200713101208368.png" alt="image-20200713101208368"></p>
-<h2 id="6-练习"><a href="#6-练习" class="headerlink" title="6. 练习"></a>6. 练习</h2><ul>
-<li>新建一个页面 将这个页面变成入口文件</li>
-<li>在页面中添加样式 </li>
-<li>修改全局配置文件 <ul>
-<li>修改头部</li>
-<li>修改背景色</li>
-<li>添加 底部导航</li>
-<li>添加图片 显示/ 选中</li>
-</ul>
-</li>
-</ul>
-<h2 id="7-语法"><a href="#7-语法" class="headerlink" title="7. 语法"></a>7. 语法</h2><h3 id="7-1-模板-循环-判断"><a href="#7-1-模板-循环-判断" class="headerlink" title="7.1 模板 循环 判断"></a>7.1 模板 循环 判断</h3><img src="image/image-20200713161832221.png" alt="image-20200713161832221" style="zoom:50%;" /> 
-
-
-
-<p><img src="image/image-20200713161847595.png" alt="image-20200713161847595" style="zoom:50%;" />\</p>
-<img src="image/image-20200713161859641.png" alt="image-20200713161859641" style="zoom:50%;" /> 
-
-<h3 id="7-2-事件"><a href="#7-2-事件" class="headerlink" title="7.2 事件"></a>7.2 事件</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span> <span class="attr">data-title</span>=<span class="string">&quot;&#123;&#123;item&#125;&#125;&quot;</span> <span class="attr">bindtap</span>=<span class="string">&quot;toQuestionDetail&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">text</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>传值 data-xxx  传值</p>
-</li>
-<li><p>接收到值</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">toQuestionDetail</span>(<span class="params">event</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">currentTarget</span>.<span class="property">dataset</span>.<span class="property">title</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="7-3-输入事件"><a href="#7-3-输入事件" class="headerlink" title="7.3 输入事件"></a>7.3 输入事件</h3><ul>
-<li>输入框</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;login&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;weui-input&quot;</span>  <span class="attr">bindinput</span>=<span class="string">&quot;handleUsername&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入用户名&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;weui-input&quot;</span>  <span class="attr">bindinput</span>=<span class="string">&quot;handlePassword&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入密码&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">bindtap</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>处理事件</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">handleUsername</span>(<span class="params">event</span>)&#123;</span><br><span class="line">   <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">detail</span>.<span class="property">value</span>)</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;</span><br><span class="line">     <span class="attr">username</span>:event.<span class="property">detail</span>.<span class="property">value</span></span><br><span class="line">   &#125;)</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-4-全局数据"><a href="#7-4-全局数据" class="headerlink" title="7.4 全局数据"></a>7.4 全局数据</h3><ul>
-<li>app.js</li>
-</ul>
-<img src="./image/image-20200715101112757.png" alt="image-20200715101112757" style="zoom:50%;" /> 
-
-<ul>
-<li><p>页面上</p>
-<p><img src="./image/image-20200715101146967.png" alt="image-20200715101146967"> </p>
-<img src="./image/image-20200715101203414.png" alt="image-20200715101203414" style="zoom:50%;" /> </li>
-</ul>
-<h2 id="8-组件"><a href="#8-组件" class="headerlink" title="8. 组件"></a>8. 组件</h2><h3 id="8-1-常用组件"><a href="#8-1-常用组件" class="headerlink" title="8.1 常用组件"></a>8.1 常用组件</h3><ul>
-<li><p>容器组件 : 承载更多的子元素</p>
-<p><code>scroll-view</code> : 滚动(可以横向滚动/纵向)</p>
-<p><code>view</code> : 类似<code>div</code></p>
-</li>
-<li><p>普通组件 : 放在容器组件中</p>
-<p><code>text</code> : 存放文本 地位和<code>span</code> 类似</p>
-<p><code>icon</code> : 想要打造一个和微信一样的UI页面</p>
-<p><code>navigator</code> : 类似路由中的 <code>router-link</code> 可以实现点击之后跳转</p>
-</li>
-<li><p>表单组件</p>
-<p><code>button</code> : 按钮</p>
-<p><code>checkbox</code> : 多选</p>
-<p><code>picker</code>: 选择器</p>
-<p><code>radio</code>: 单选</p>
-<p><code>radio-group</code> : 单选组</p>
-<p><code>input</code> :输入框</p>
-</li>
-</ul>
-<h3 id="8-1-navigator-传值"><a href="#8-1-navigator-传值" class="headerlink" title="8.1 navigator 传值"></a>8.1 navigator 传值</h3><ul>
-<li>方式一 : 通过组件</li>
-</ul>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="comment">// url : 跳转对应页面  title: 想要传过去的值</span></span><br><span class="line"></span><br><span class="line">&lt;navigator url=<span class="string">&quot;/pages/navigate/navigate?title=&#123;&#123;item&#125;&#125;&quot;</span>&gt;&#123;&#123;item&#125;&#125;&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 另外一个页面接收</span></span><br><span class="line">  <span class="attr">onLoad</span>: <span class="keyword">function</span> (<span class="params">options</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(options)</span><br><span class="line">    <span class="comment">//将数据赋值的方法 setState</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;</span><br><span class="line">      <span class="attr">title</span>:options.<span class="property">title</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>方式二 : 通过动态 api</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">wx.<span class="title function_">navigateTo</span>(&#123;</span><br><span class="line">      <span class="attr">url</span>:<span class="string">&quot;/pages/questionDetail/questionDetail&quot;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="9-api"><a href="#9-api" class="headerlink" title="9. api"></a>9. api</h2><ul>
-<li><p>wx.xxx({属性})</p>
-</li>
-<li><p>网络请求</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> </span><br><span class="line"><span class="comment">//需要在onLoad生命周期中请求数据</span></span><br><span class="line">wx.<span class="title function_">request</span>(&#123;</span><br><span class="line">      <span class="attr">url</span>:url+<span class="string">&quot;/question/list&quot;</span>,</span><br><span class="line">  		<span class="attr">method</span>:<span class="string">&quot;GET&quot;</span></span><br><span class="line">      <span class="attr">success</span>:<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">				<span class="comment">// 将数据赋值到data中</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;</span><br><span class="line">          <span class="attr">questionList</span>:res.<span class="property">data</span>.<span class="property">data</span></span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="10-样式"><a href="#10-样式" class="headerlink" title="10. 样式"></a>10. 样式</h2><p>大部分情况和css是一致的</p>
-<p>与 CSS 相比，WXSS 扩展的特性有：</p>
-<ul>
-<li><p>尺寸单位</p>
-<ul>
-<li>px</li>
-<li>rpx : 小程序提供的样式单位</li>
-</ul>
-<p>每个手机的机型都有一个倍屏概念 屏幕宽度 375px  1px == 两个物理像素  这种情况就叫2倍屏</p>
-<p>普通的webapp :  缩放去解决倍屏问题  1px  transform: scale(0.5)</p>
-<p>rpx 就是用来解决小程序的倍屏问题的  1rpx === 1个物理像素</p>
-</li>
-<li><p>样式导入</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;./weui.wxss&quot;</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><ul>
-<li>每天晚上都打卡再睡觉</li>
-<li>10点之前 11点</li>
-</ul>
-<h2 id="2020年07月14号"><a href="#2020年07月14号" class="headerlink" title="2020年07月14号"></a>2020年07月14号</h2><ul>
-<li>页面渲染</li>
-<li>请求数据  登录页面  首页</li>
-<li>(做题/选做)</li>
-</ul>
-<h2 id="2020年07月15日-星期三-天气晴-21°-31°"><a href="#2020年07月15日-星期三-天气晴-21°-31°" class="headerlink" title="2020年07月15日 星期三 天气晴 21°-31°"></a>2020年07月15日 星期三 天气晴 21°-31°</h2><img src="./image/image-20200715091515937.png" alt="image-20200715091515937" style="zoom:50%;" /> 
-
-
-
-<p>vue/ react </p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">模板:</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;数据&quot;</span>  <span class="attr">:key</span>=<span class="string">&quot;唯一标识&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on</span>=<span class="string">&quot;数据&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;list.map(item=&gt;<span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>)&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">渲染函数 </span><br><span class="line">render : 编译模板</span><br><span class="line"></span><br><span class="line">vNode(虚拟dom)</span><br><span class="line">&#123;</span><br><span class="line">	key: &quot;div&quot;,</span><br><span class="line">	children:[&#123;key:&quot;p&quot;,children:&quot;我是p&quot;&#125;],</span><br><span class="line">	props:&#123;id:&quot;box&quot;,class:&quot;container&quot;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">diff : 原有的vNode 和新的vNode对比 只会更新变化的内容</span><br><span class="line"></span><br><span class="line">视图</span><br><span class="line"></span><br><span class="line">div</span><br><span class="line">div</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>登录的逻辑<ul>
-<li>布局 两个输入框 一个按钮</li>
-<li>点击登录的时候<ul>
-<li>参数传过去</li>
-<li>失败 toast</li>
-<li>成功 跳转页面</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>点击进入详情之前 判断</li>
-<li>进入详情页 再次请求数据 </li>
-</ul>
-]]></content>
-      <categories>
-        <category>小程序</category>
-      </categories>
-      <tags>
-        <tag>小程序</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>项目实战——振涛考试系统</title>
     <url>/liuqi_blogs/2021/06/11/%E7%AC%AC%E4%B8%80%E5%91%A8-%E6%8C%AF%E6%B6%9B%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE-vue/</url>
     <content><![CDATA[<h1 id="振涛考试系统"><a href="#振涛考试系统" class="headerlink" title="振涛考试系统"></a>振涛考试系统</h1><h2 id="1-项目基础封装"><a href="#1-项目基础封装" class="headerlink" title="1. 项目基础封装"></a>1. 项目基础封装</h2><h3 id="1-1-请求的封装"><a href="#1-1-请求的封装" class="headerlink" title="1.1 请求的封装"></a>1.1 请求的封装</h3><span id="more"></span>
@@ -5293,6 +5119,180 @@ Markdown 还没有办法指定图片的高度与宽度，如果你需要的话�
       </categories>
       <tags>
         <tag>vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小程序入门</title>
+    <url>/liuqi_blogs/2022/01/19/%E7%AC%AC%E4%B8%89%E5%91%A8-%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E6%95%B4%E4%BD%93/</url>
+    <content><![CDATA[<h1 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h1><h2 id="1-是什么"><a href="#1-是什么" class="headerlink" title="1. 是什么?"></a>1. 是什么?</h2><ul>
+<li><p>不是网页  没有跨域</p>
+</li>
+<li><p>不是app  </p>
+</li>
+<li><p>嵌套在app中的一种衍生产品 </p>
+<ul>
+<li>微信小程序</li>
+<li>支付宝小程序</li>
+<li>字节跳动小程序</li>
+<li>qq小程序</li>
+<li>百度小程序<span id="more"></span>
+<h2 id="2-下载"><a href="#2-下载" class="headerlink" title="2. 下载"></a>2. 下载</h2></li>
+</ul>
+</li>
+<li><p>官网 : <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html</a></p>
+</li>
+</ul>
+<img src="./image/image-20200713091718367.png" alt="image-20200713091718367" style="zoom: 33%;" /> 
+
+<h2 id="3-开发工具"><a href="#3-开发工具" class="headerlink" title="3. 开发工具"></a>3. 开发工具</h2><img src="./image/image-20200713092601472.png" alt="image-20200713092601472" style="zoom:23%;" /> 
+
+<ul>
+<li>开启对请求的不校验</li>
+</ul>
+<img src="./image/image-20200713092757423.png" alt="image-20200713092757423" style="zoom:33%;" /> 
+
+<h2 id="4-文档介绍"><a href="#4-文档介绍" class="headerlink" title="4. 文档介绍"></a>4. 文档介绍</h2><img src="./image/image-20200713095622026.png" alt="image-20200713095622026" style="zoom:50%;" /> 
+
+<ul>
+<li>指南: 大的方向 小程序大概怎么开发</li>
+<li>框架: 文件的配置和语法</li>
+<li>组件: 页面的ui</li>
+<li>api : 跳转 请求 嵌入网页  提示框…</li>
+</ul>
+<h2 id="5-新建页面"><a href="#5-新建页面" class="headerlink" title="5. 新建页面"></a>5. 新建页面</h2><p><img src="./image/image-20200713101122560.png" alt="image-20200713101122560"></p>
+<h3 id="5-1-入口文件"><a href="#5-1-入口文件" class="headerlink" title="5.1 入口文件"></a>5.1 入口文件</h3><p><img src="./image/image-20200713101208368.png" alt="image-20200713101208368"></p>
+<h2 id="6-练习"><a href="#6-练习" class="headerlink" title="6. 练习"></a>6. 练习</h2><ul>
+<li>新建一个页面 将这个页面变成入口文件</li>
+<li>在页面中添加样式 </li>
+<li>修改全局配置文件 <ul>
+<li>修改头部</li>
+<li>修改背景色</li>
+<li>添加 底部导航</li>
+<li>添加图片 显示/ 选中</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-语法"><a href="#7-语法" class="headerlink" title="7. 语法"></a>7. 语法</h2><h3 id="7-1-模板-循环-判断"><a href="#7-1-模板-循环-判断" class="headerlink" title="7.1 模板 循环 判断"></a>7.1 模板 循环 判断</h3><img src="image/image-20200713161832221.png" alt="image-20200713161832221" style="zoom:50%;" /> 
+
+
+
+<p><img src="image/image-20200713161847595.png" alt="image-20200713161847595" style="zoom:50%;" />\</p>
+<img src="image/image-20200713161859641.png" alt="image-20200713161859641" style="zoom:50%;" /> 
+
+<h3 id="7-2-事件"><a href="#7-2-事件" class="headerlink" title="7.2 事件"></a>7.2 事件</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span> <span class="attr">data-title</span>=<span class="string">&quot;&#123;&#123;item&#125;&#125;&quot;</span> <span class="attr">bindtap</span>=<span class="string">&quot;toQuestionDetail&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">text</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>传值 data-xxx  传值</p>
+</li>
+<li><p>接收到值</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">toQuestionDetail</span>(<span class="params">event</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">currentTarget</span>.<span class="property">dataset</span>.<span class="property">title</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="7-3-输入事件"><a href="#7-3-输入事件" class="headerlink" title="7.3 输入事件"></a>7.3 输入事件</h3><ul>
+<li>输入框</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;login&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;weui-input&quot;</span>  <span class="attr">bindinput</span>=<span class="string">&quot;handleUsername&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入用户名&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;weui-input&quot;</span>  <span class="attr">bindinput</span>=<span class="string">&quot;handlePassword&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入密码&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">bindtap</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>处理事件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">handleUsername</span>(<span class="params">event</span>)&#123;</span><br><span class="line">   <span class="variable language_">console</span>.<span class="title function_">log</span>(event.<span class="property">detail</span>.<span class="property">value</span>)</span><br><span class="line"></span><br><span class="line">   <span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;</span><br><span class="line">     <span class="attr">username</span>:event.<span class="property">detail</span>.<span class="property">value</span></span><br><span class="line">   &#125;)</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-4-全局数据"><a href="#7-4-全局数据" class="headerlink" title="7.4 全局数据"></a>7.4 全局数据</h3><ul>
+<li>app.js</li>
+</ul>
+<img src="./image/image-20200715101112757.png" alt="image-20200715101112757" style="zoom:50%;" /> 
+
+<ul>
+<li><p>页面上</p>
+<p><img src="./image/image-20200715101146967.png" alt="image-20200715101146967"> </p>
+<img src="./image/image-20200715101203414.png" alt="image-20200715101203414" style="zoom:50%;" /> </li>
+</ul>
+<h2 id="8-组件"><a href="#8-组件" class="headerlink" title="8. 组件"></a>8. 组件</h2><h3 id="8-1-常用组件"><a href="#8-1-常用组件" class="headerlink" title="8.1 常用组件"></a>8.1 常用组件</h3><ul>
+<li><p>容器组件 : 承载更多的子元素</p>
+<p><code>scroll-view</code> : 滚动(可以横向滚动/纵向)</p>
+<p><code>view</code> : 类似<code>div</code></p>
+</li>
+<li><p>普通组件 : 放在容器组件中</p>
+<p><code>text</code> : 存放文本 地位和<code>span</code> 类似</p>
+<p><code>icon</code> : 想要打造一个和微信一样的UI页面</p>
+<p><code>navigator</code> : 类似路由中的 <code>router-link</code> 可以实现点击之后跳转</p>
+</li>
+<li><p>表单组件</p>
+<p><code>button</code> : 按钮</p>
+<p><code>checkbox</code> : 多选</p>
+<p><code>picker</code>: 选择器</p>
+<p><code>radio</code>: 单选</p>
+<p><code>radio-group</code> : 单选组</p>
+<p><code>input</code> :输入框</p>
+</li>
+</ul>
+<h3 id="8-1-navigator-传值"><a href="#8-1-navigator-传值" class="headerlink" title="8.1 navigator 传值"></a>8.1 navigator 传值</h3><ul>
+<li>方式一 : 通过组件</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="comment">// url : 跳转对应页面  title: 想要传过去的值</span></span><br><span class="line"></span><br><span class="line">&lt;navigator url=<span class="string">&quot;/pages/navigate/navigate?title=&#123;&#123;item&#125;&#125;&quot;</span>&gt;&#123;&#123;item&#125;&#125;&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 另外一个页面接收</span></span><br><span class="line">  <span class="attr">onLoad</span>: <span class="keyword">function</span> (<span class="params">options</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(options)</span><br><span class="line">    <span class="comment">//将数据赋值的方法 setState</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;</span><br><span class="line">      <span class="attr">title</span>:options.<span class="property">title</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方式二 : 通过动态 api</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">wx.<span class="title function_">navigateTo</span>(&#123;</span><br><span class="line">      <span class="attr">url</span>:<span class="string">&quot;/pages/questionDetail/questionDetail&quot;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-api"><a href="#9-api" class="headerlink" title="9. api"></a>9. api</h2><ul>
+<li><p>wx.xxx({属性})</p>
+</li>
+<li><p>网络请求</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> </span><br><span class="line"><span class="comment">//需要在onLoad生命周期中请求数据</span></span><br><span class="line">wx.<span class="title function_">request</span>(&#123;</span><br><span class="line">      <span class="attr">url</span>:url+<span class="string">&quot;/question/list&quot;</span>,</span><br><span class="line">  		<span class="attr">method</span>:<span class="string">&quot;GET&quot;</span></span><br><span class="line">      <span class="attr">success</span>:<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">				<span class="comment">// 将数据赋值到data中</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;</span><br><span class="line">          <span class="attr">questionList</span>:res.<span class="property">data</span>.<span class="property">data</span></span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="10-样式"><a href="#10-样式" class="headerlink" title="10. 样式"></a>10. 样式</h2><p>大部分情况和css是一致的</p>
+<p>与 CSS 相比，WXSS 扩展的特性有：</p>
+<ul>
+<li><p>尺寸单位</p>
+<ul>
+<li>px</li>
+<li>rpx : 小程序提供的样式单位</li>
+</ul>
+<p>每个手机的机型都有一个倍屏概念 屏幕宽度 375px  1px == 两个物理像素  这种情况就叫2倍屏</p>
+<p>普通的webapp :  缩放去解决倍屏问题  1px  transform: scale(0.5)</p>
+<p>rpx 就是用来解决小程序的倍屏问题的  1rpx === 1个物理像素</p>
+</li>
+<li><p>样式导入</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;./weui.wxss&quot;</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><ul>
+<li>每天晚上都打卡再睡觉</li>
+<li>10点之前 11点</li>
+</ul>
+<h2 id="2020年07月14号"><a href="#2020年07月14号" class="headerlink" title="2020年07月14号"></a>2020年07月14号</h2><ul>
+<li>页面渲染</li>
+<li>请求数据  登录页面  首页</li>
+<li>(做题/选做)</li>
+</ul>
+<h2 id="2020年07月15日-星期三-天气晴-21°-31°"><a href="#2020年07月15日-星期三-天气晴-21°-31°" class="headerlink" title="2020年07月15日 星期三 天气晴 21°-31°"></a>2020年07月15日 星期三 天气晴 21°-31°</h2><img src="./image/image-20200715091515937.png" alt="image-20200715091515937" style="zoom:50%;" /> 
+
+
+
+<p>vue/ react </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">模板:</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;数据&quot;</span>  <span class="attr">:key</span>=<span class="string">&quot;唯一标识&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on</span>=<span class="string">&quot;数据&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;list.map(item=&gt;<span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>)&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">渲染函数 </span><br><span class="line">render : 编译模板</span><br><span class="line"></span><br><span class="line">vNode(虚拟dom)</span><br><span class="line">&#123;</span><br><span class="line">	key: &quot;div&quot;,</span><br><span class="line">	children:[&#123;key:&quot;p&quot;,children:&quot;我是p&quot;&#125;],</span><br><span class="line">	props:&#123;id:&quot;box&quot;,class:&quot;container&quot;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">diff : 原有的vNode 和新的vNode对比 只会更新变化的内容</span><br><span class="line"></span><br><span class="line">视图</span><br><span class="line"></span><br><span class="line">div</span><br><span class="line">div</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>登录的逻辑<ul>
+<li>布局 两个输入框 一个按钮</li>
+<li>点击登录的时候<ul>
+<li>参数传过去</li>
+<li>失败 toast</li>
+<li>成功 跳转页面</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>点击进入详情之前 判断</li>
+<li>进入详情页 再次请求数据 </li>
+</ul>
+]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
       </tags>
   </entry>
   <entry>
