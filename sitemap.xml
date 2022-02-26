@@ -595,13 +595,6 @@
   </url>
   
   <url>
-    <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/tags/Linux/</loc>
-    <lastmod>2022-02-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/tags/react-js/</loc>
     <lastmod>2022-02-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -609,7 +602,7 @@
   </url>
   
   <url>
-    <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/tags/Nginx/</loc>
+    <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/tags/Linux/</loc>
     <lastmod>2022-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -617,6 +610,13 @@
   
   <url>
     <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/tags/node-js/</loc>
+    <lastmod>2022-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/tags/Nginx/</loc>
     <lastmod>2022-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -716,13 +716,6 @@
   </url>
   
   <url>
-    <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/categories/Linux/</loc>
-    <lastmod>2022-02-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/categories/react-js/</loc>
     <lastmod>2022-02-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -730,7 +723,7 @@
   </url>
   
   <url>
-    <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/categories/Nginx/</loc>
+    <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/categories/Linux/</loc>
     <lastmod>2022-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -738,6 +731,13 @@
   
   <url>
     <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/categories/node-js/</loc>
+    <lastmod>2022-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dreamtraveler-liuqi.github.io/liuqi_blogs/categories/Nginx/</loc>
     <lastmod>2022-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
